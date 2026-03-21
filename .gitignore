@@ -1,0 +1,10 @@
+# Local model downloads and checkpoints
+/Qwen*/
+/models/
+/checkpoints/
+/hf-models/
+/model-cache/
+
+# Hugging Face local/cache directories
+/.cache/
+/huggingface/
