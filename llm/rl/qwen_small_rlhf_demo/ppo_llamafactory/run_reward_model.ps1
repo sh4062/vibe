@@ -3,11 +3,11 @@ $ErrorActionPreference = "Stop"
 $ScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
 
 if (-not $env:MODEL_PATH) {
-    $env:MODEL_PATH = "E:\code\vibe\Qwen3.5-0.8B"
+    $env:MODEL_PATH = "Qwen/Qwen2.5-0.5B-Instruct"
 }
 
 if (-not $env:TEMPLATE) {
-    $env:TEMPLATE = "default"
+    $env:TEMPLATE = "qwen"
 }
 
 $env:OUTPUT_DIR = Join-Path $ScriptDir "outputs\reward_model_lora"

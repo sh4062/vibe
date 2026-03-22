@@ -103,6 +103,8 @@ This is not enough for a meaningful aligned model, but it is ideal for verifying
 `ppo_llamafactory` is the heaviest path because it needs a reward model checkpoint before PPO training starts.
 `ppo_trl` is lighter because it uses a rule-based reward.
 
+For `ppo_llamafactory`, a smaller instruct checkpoint such as `Qwen/Qwen2.5-0.5B-Instruct` is recommended over `Qwen3.5-0.8B` because PPO and reward-model tooling is currently more stable there.
+
 ## References
 
 - LLaMA-Factory supports Qwen, DPO, reward modeling, and PPO: [GitHub README](https://github.com/hiyouga/LlamaFactory)
