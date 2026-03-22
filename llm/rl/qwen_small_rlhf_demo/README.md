@@ -14,6 +14,7 @@ PowerShell launchers are included:
 
 - `dpo_llamafactory/run_dpo.ps1`
 - `dpo_llamafactory/run_compare_dpo.ps1`
+- `dpo_llamafactory/run_score_dpo.ps1`
 - `ppo_llamafactory/run_reward_model.ps1`
 - `ppo_llamafactory/run_ppo.ps1`
 - `grpo_trl/run_grpo.ps1`
@@ -40,6 +41,17 @@ $env:ADAPTER_PATH="E:\code\vibe\llm\rl\qwen_small_rlhf_demo\dpo_llamafactory\out
 ```
 
 This writes a JSONL file containing `prompt`, `base_output`, `lora_output`, `chosen`, and `rejected`.
+
+To score whether the DPO adapter assigns higher probability to `chosen` than `rejected`:
+
+```powershell
+cd E:\code\vibe\llm\rl\qwen_small_rlhf_demo\dpo_llamafactory
+$env:MODEL_PATH="E:\code\vibe\Qwen3.5-0.8B"
+$env:ADAPTER_PATH="E:\code\vibe\llm\rl\qwen_small_rlhf_demo\dpo_llamafactory\outputs\dpo_lora"
+.\run_score_dpo.ps1
+```
+
+This writes `outputs\dpo_score.json` with base-vs-LoRA margins for each sample.
 
 ## Recommended model choice
 

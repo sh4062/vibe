@@ -10,9 +10,7 @@ if (-not $env:TEMPLATE) {
     $env:TEMPLATE = "default"
 }
 
-if (-not $env:OUTPUT_DIR) {
-    $env:OUTPUT_DIR = Join-Path $ScriptDir "outputs\reward_model_lora"
-}
+$env:OUTPUT_DIR = Join-Path $ScriptDir "outputs\reward_model_lora"
 
 New-Item -ItemType Directory -Force -Path (Join-Path $ScriptDir "outputs") | Out-Null
 

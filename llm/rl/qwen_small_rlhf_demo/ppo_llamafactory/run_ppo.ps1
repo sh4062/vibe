@@ -14,9 +14,7 @@ if (-not $env:REWARD_MODEL_PATH) {
     $env:REWARD_MODEL_PATH = Join-Path $ScriptDir "outputs\reward_model_lora"
 }
 
-if (-not $env:OUTPUT_DIR) {
-    $env:OUTPUT_DIR = Join-Path $ScriptDir "outputs\ppo_lora"
-}
+$env:OUTPUT_DIR = Join-Path $ScriptDir "outputs\ppo_lora"
 
 New-Item -ItemType Directory -Force -Path (Join-Path $ScriptDir "outputs") | Out-Null
 
