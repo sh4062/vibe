@@ -1,162 +1,130 @@
 [
   {
-    "messages": [
+    "conversations": [
       {
-        "role": "user",
-        "content": "Rewrite this sentence in a friendlier tone: Your request has been denied."
+        "from": "human",
+        "value": "Rewrite this sentence in a friendlier tone: Your request has been denied."
       }
     ],
-    "chosen": [
-      {
-        "role": "assistant",
-        "content": "I am sorry, but I cannot approve that request right now."
-      }
-    ],
-    "rejected": [
-      {
-        "role": "assistant",
-        "content": "Denied."
-      }
-    ]
+    "chosen": {
+      "from": "gpt",
+      "value": "I am sorry, but I cannot approve that request right now."
+    },
+    "rejected": {
+      "from": "gpt",
+      "value": "Denied."
+    }
   },
   {
-    "messages": [
+    "conversations": [
       {
-        "role": "user",
-        "content": "Answer in one short sentence: Why should people write tests?"
+        "from": "human",
+        "value": "Answer in one short sentence: Why should people write tests?"
       }
     ],
-    "chosen": [
-      {
-        "role": "assistant",
-        "content": "Tests help catch bugs early and make code changes safer."
-      }
-    ],
-    "rejected": [
-      {
-        "role": "assistant",
-        "content": "Because tests are required."
-      }
-    ]
+    "chosen": {
+      "from": "gpt",
+      "value": "Tests help catch bugs early and make code changes safer."
+    },
+    "rejected": {
+      "from": "gpt",
+      "value": "Because tests are required."
+    }
   },
   {
-    "messages": [
+    "conversations": [
       {
-        "role": "user",
-        "content": "Give a polite two-line response to: I think your package is broken."
+        "from": "human",
+        "value": "Give a polite two-line response to: I think your package is broken."
       }
     ],
-    "chosen": [
-      {
-        "role": "assistant",
-        "content": "Thanks for flagging it. If you share the error message or steps to reproduce, I can help investigate."
-      }
-    ],
-    "rejected": [
-      {
-        "role": "assistant",
-        "content": "It works for me."
-      }
-    ]
+    "chosen": {
+      "from": "gpt",
+      "value": "Thanks for flagging it. If you share the error message or steps to reproduce, I can help investigate."
+    },
+    "rejected": {
+      "from": "gpt",
+      "value": "It works for me."
+    }
   },
   {
-    "messages": [
+    "conversations": [
       {
-        "role": "user",
-        "content": "Summarize the benefit of regular backups in one sentence."
+        "from": "human",
+        "value": "Summarize the benefit of regular backups in one sentence."
       }
     ],
-    "chosen": [
-      {
-        "role": "assistant",
-        "content": "Regular backups reduce the risk of losing important data after mistakes or failures."
-      }
-    ],
-    "rejected": [
-      {
-        "role": "assistant",
-        "content": "Backups are useful."
-      }
-    ]
+    "chosen": {
+      "from": "gpt",
+      "value": "Regular backups reduce the risk of losing important data after mistakes or failures."
+    },
+    "rejected": {
+      "from": "gpt",
+      "value": "Backups are useful."
+    }
   },
   {
-    "messages": [
+    "conversations": [
       {
-        "role": "user",
-        "content": "Write a concise answer: What makes documentation helpful?"
+        "from": "human",
+        "value": "Write a concise answer: What makes documentation helpful?"
       }
     ],
-    "chosen": [
-      {
-        "role": "assistant",
-        "content": "Helpful documentation is clear, accurate, and easy to follow with examples."
-      }
-    ],
-    "rejected": [
-      {
-        "role": "assistant",
-        "content": "Documentation helps because it is documentation."
-      }
-    ]
+    "chosen": {
+      "from": "gpt",
+      "value": "Helpful documentation is clear, accurate, and easy to follow with examples."
+    },
+    "rejected": {
+      "from": "gpt",
+      "value": "Documentation helps because it is documentation."
+    }
   },
   {
-    "messages": [
+    "conversations": [
       {
-        "role": "user",
-        "content": "Answer briefly: Why is consistent naming in code useful?"
+        "from": "human",
+        "value": "Answer briefly: Why is consistent naming in code useful?"
       }
     ],
-    "chosen": [
-      {
-        "role": "assistant",
-        "content": "Consistent naming makes code easier to read, search, and maintain."
-      }
-    ],
-    "rejected": [
-      {
-        "role": "assistant",
-        "content": "Names are not very important."
-      }
-    ]
+    "chosen": {
+      "from": "gpt",
+      "value": "Consistent naming makes code easier to read, search, and maintain."
+    },
+    "rejected": {
+      "from": "gpt",
+      "value": "Names are not very important."
+    }
   },
   {
-    "messages": [
+    "conversations": [
       {
-        "role": "user",
-        "content": "Respond politely: Can you fix this bug today?"
+        "from": "human",
+        "value": "Respond politely: Can you fix this bug today?"
       }
     ],
-    "chosen": [
-      {
-        "role": "assistant",
-        "content": "I can take a look today and let you know what I find once I reproduce the issue."
-      }
-    ],
-    "rejected": [
-      {
-        "role": "assistant",
-        "content": "Maybe."
-      }
-    ]
+    "chosen": {
+      "from": "gpt",
+      "value": "I can take a look today and let you know what I find once I reproduce the issue."
+    },
+    "rejected": {
+      "from": "gpt",
+      "value": "Maybe."
+    }
   },
   {
-    "messages": [
+    "conversations": [
       {
-        "role": "user",
-        "content": "One sentence only: Why should answers avoid unnecessary jargon?"
+        "from": "human",
+        "value": "One sentence only: Why should answers avoid unnecessary jargon?"
       }
     ],
-    "chosen": [
-      {
-        "role": "assistant",
-        "content": "Avoiding unnecessary jargon makes answers easier for more people to understand."
-      }
-    ],
-    "rejected": [
-      {
-        "role": "assistant",
-        "content": "Jargon is bad."
-      }
-    ]
+    "chosen": {
+      "from": "gpt",
+      "value": "Avoiding unnecessary jargon makes answers easier for more people to understand."
+    },
+    "rejected": {
+      "from": "gpt",
+      "value": "Jargon is bad."
+    }
   }
 ]

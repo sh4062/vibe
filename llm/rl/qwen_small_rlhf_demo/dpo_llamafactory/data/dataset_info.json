@@ -4,9 +4,15 @@
     "ranking": true,
     "formatting": "sharegpt",
     "columns": {
-      "messages": "messages",
+      "messages": "conversations",
       "chosen": "chosen",
       "rejected": "rejected"
+    },
+    "tags": {
+      "role_tag": "from",
+      "content_tag": "value",
+      "user_tag": "human",
+      "assistant_tag": "gpt"
     }
   }
 }
