@@ -8,6 +8,27 @@ This folder contains three minimal demos for a locally downloaded Qwen small mod
 
 These demos are intentionally tiny so they are easier to run on limited hardware.
 
+## Windows usage
+
+PowerShell launchers are included:
+
+- `dpo_llamafactory/run_dpo.ps1`
+- `ppo_llamafactory/run_reward_model.ps1`
+- `ppo_llamafactory/run_ppo.ps1`
+- `grpo_trl/run_grpo.ps1`
+
+The default Windows model path is:
+
+```powershell
+E:\code\vibe\Qwen3.5-0.8B
+```
+
+You can override it with:
+
+```powershell
+$env:MODEL_PATH="E:\code\vibe\Qwen3.5-0.8B"
+```
+
 ## Recommended model choice
 
 You said you already downloaded:
