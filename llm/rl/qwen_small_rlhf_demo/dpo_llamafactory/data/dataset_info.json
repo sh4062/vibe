@@ -1,0 +1,12 @@
+{
+  "tiny_dpo_local": {
+    "file_name": "tiny_dpo.json",
+    "ranking": true,
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "chosen": "chosen",
+      "rejected": "rejected"
+    }
+  }
+}

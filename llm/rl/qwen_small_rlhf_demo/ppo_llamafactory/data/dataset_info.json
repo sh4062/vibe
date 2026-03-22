@@ -1,0 +1,21 @@
+{
+  "tiny_rm_local": {
+    "file_name": "tiny_rm.json",
+    "ranking": true,
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "chosen": "chosen",
+      "rejected": "rejected"
+    }
+  },
+  "tiny_ppo_prompts_local": {
+    "file_name": "tiny_ppo_prompts.json",
+    "formatting": "alpaca",
+    "columns": {
+      "instruction": "instruction",
+      "input": "input",
+      "output": "output"
+    }
+  }
+}
