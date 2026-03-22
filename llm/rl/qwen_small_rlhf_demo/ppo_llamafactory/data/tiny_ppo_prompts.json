@@ -1,41 +1,41 @@
 [
   {
-    "instruction": "Explain in one sentence why unit tests are useful.",
+    "instruction": "请介绍一下淘宝的商业模式。",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "Respond politely to a user who says a command failed.",
+    "instruction": "帮我总结淘宝的发展历史。",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "Summarize the benefit of clear logging in one sentence.",
+    "instruction": "淘宝和京东有什么区别？",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "Answer briefly: Why should examples be minimal when learning a new library?",
+    "instruction": "淘宝为什么能吸引这么多商家？",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "Write a concise explanation of why backups matter.",
+    "instruction": "请简单分析淘宝直播的作用。",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "Answer politely: I do not understand this stack trace.",
+    "instruction": "你怎么看淘宝的用户增长策略？",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "Explain in one sentence why naming consistency matters in code.",
+    "instruction": "请用一句话说明单元测试为什么有用。",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "Give a one-sentence reason to keep README files current.",
+    "instruction": "请礼貌回复：我看不懂这个报错。",
     "input": "",
     "output": ""
   }
