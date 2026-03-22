@@ -1,0 +1,26 @@
+[
+  {
+    "prompt": "Reply politely to this user: Your command failed and I am frustrated."
+  },
+  {
+    "prompt": "Write one helpful sentence explaining why backups are important."
+  },
+  {
+    "prompt": "Rewrite this to sound more supportive: I cannot help with that."
+  },
+  {
+    "prompt": "Answer briefly and politely: I do not understand this error message."
+  },
+  {
+    "prompt": "Write a concise, friendly response to: This package seems broken."
+  },
+  {
+    "prompt": "Explain in one sentence why clear logs are useful."
+  },
+  {
+    "prompt": "Reply politely: Can you fix this issue today?"
+  },
+  {
+    "prompt": "Give a short, clear answer: Why are tests useful?"
+  }
+]

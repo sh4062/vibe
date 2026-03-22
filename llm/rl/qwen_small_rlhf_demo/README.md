@@ -1,9 +1,10 @@
 # Qwen Small RLHF Demo
 
-This folder contains three minimal demos for a locally downloaded Qwen small model:
+This folder contains four minimal demos for a locally downloaded Qwen small model:
 
 - `dpo_llamafactory/`: DPO with LLaMA-Factory
 - `ppo_llamafactory/`: Reward modeling + PPO with LLaMA-Factory
+- `ppo_trl/`: PPO with TRL and a rule-based reward
 - `grpo_trl/`: GRPO with TRL
 
 These demos are intentionally tiny so they are easier to run on limited hardware.
@@ -17,6 +18,7 @@ PowerShell launchers are included:
 - `dpo_llamafactory/run_score_dpo.ps1`
 - `ppo_llamafactory/run_reward_model.ps1`
 - `ppo_llamafactory/run_ppo.ps1`
+- `ppo_trl/run_ppo.ps1`
 - `grpo_trl/run_grpo.ps1`
 
 The default Windows model path is:
@@ -86,7 +88,8 @@ For a base checkpoint, `default` is the safest starting point in these demos.
 For low compute, the simplest route is to avoid large public datasets entirely and use local toy data:
 
 - `DPO`: 8 hand-written preference pairs
-- `PPO`: 8 prompts plus the same 8 preference pairs to train a tiny reward model first
+- `PPO (LLaMA-Factory)`: 8 prompts plus the same 8 preference pairs to train a tiny reward model first
+- `PPO (TRL)`: 8 prompts with a rule-based reward
 - `GRPO`: 12 arithmetic prompts with a rule-based exact-match reward
 
 This is not enough for a meaningful aligned model, but it is ideal for verifying the training pipeline end to end.
@@ -95,9 +98,10 @@ This is not enough for a meaningful aligned model, but it is ideal for verifying
 
 1. Run `dpo_llamafactory` first
 2. Run `grpo_trl` second
-3. Run `ppo_llamafactory` last
+3. Run `ppo_trl` or `ppo_llamafactory` last
 
-`PPO` is the heaviest path because it needs a reward model checkpoint before PPO training starts.
+`ppo_llamafactory` is the heaviest path because it needs a reward model checkpoint before PPO training starts.
+`ppo_trl` is lighter because it uses a rule-based reward.
 
 ## References
 
