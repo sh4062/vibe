@@ -44,10 +44,18 @@ def load_prompt_dataset(data_path: str) -> Dataset:
 
 def prepare_dataset(dataset: Dataset, tokenizer):
     def tokenize(row):
-        row["input_ids"] = tokenizer.encode(row["prompt"], add_special_tokens=False)
-        return row
+        encoded = tokenizer(
+            row["prompt"],
+            add_special_tokens=False,
+            truncation=True,
+            max_length=128,
+        )
+        return {
+            "input_ids": encoded["input_ids"],
+            "attention_mask": encoded["attention_mask"],
+        }
 
-    return dataset.map(tokenize)
+    return dataset.map(tokenize, remove_columns=dataset.column_names)
 
 
 def main():
