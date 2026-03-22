@@ -7,7 +7,7 @@ import torch.nn as nn
 from datasets import Dataset
 from peft import LoraConfig
 from transformers import AutoModelForCausalLM, AutoTokenizer
-from trl.experimental.ppo import PPOConfig, PPOTrainer
+from trl import AutoModelForCausalLMWithValueHead, PPOConfig, PPOTrainer
 
 
 class RuleRewardModel(nn.Module):
@@ -33,23 +33,6 @@ class RuleRewardModel(nn.Module):
             scores.append(score)
 
         logits = torch.tensor(scores, device=input_ids.device, dtype=torch.float32).unsqueeze(-1)
-        return SimpleNamespace(logits=logits)
-
-
-class TinyValueModel(nn.Module):
-    def __init__(self, vocab_size: int, hidden_size: int = 64):
-        super().__init__()
-        self.embed = nn.Embedding(vocab_size, hidden_size)
-        self.proj = nn.Linear(hidden_size, 1)
-
-    def forward(self, input_ids=None, attention_mask=None, **kwargs):
-        hidden = self.embed(input_ids)
-        if attention_mask is None:
-            pooled = hidden.mean(dim=1)
-        else:
-            mask = attention_mask.unsqueeze(-1).float()
-            pooled = (hidden * mask).sum(dim=1) / mask.sum(dim=1).clamp(min=1.0)
-        logits = self.proj(pooled)
         return SimpleNamespace(logits=logits)
 
 
@@ -88,10 +71,14 @@ def main():
     )
 
     reward_model = RuleRewardModel(tokenizer)
-    value_model = TinyValueModel(tokenizer.vocab_size)
+    value_model = AutoModelForCausalLMWithValueHead.from_pretrained(
+        model_path,
+        trust_remote_code=True,
+        torch_dtype=torch_dtype,
+        device_map="auto" if use_cuda else None,
+    )
     if use_cuda:
         reward_model = reward_model.cuda()
-        value_model = value_model.cuda()
 
     dataset = prepare_dataset(load_prompt_dataset(data_path), tokenizer)
 
