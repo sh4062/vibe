@@ -1,162 +1,130 @@
 [
   {
-    "messages": [
+    "conversations": [
       {
-        "role": "user",
-        "content": "Answer in one short sentence: Why should error messages be specific?"
+        "from": "human",
+        "value": "Answer in one short sentence: Why should error messages be specific?"
       }
     ],
-    "chosen": [
-      {
-        "role": "assistant",
-        "content": "Specific error messages help users understand what went wrong and how to fix it."
-      }
-    ],
-    "rejected": [
-      {
-        "role": "assistant",
-        "content": "Because details are good."
-      }
-    ]
+    "chosen": {
+      "from": "gpt",
+      "value": "Specific error messages help users understand what went wrong and how to fix it."
+    },
+    "rejected": {
+      "from": "gpt",
+      "value": "Because details are good."
+    }
   },
   {
-    "messages": [
+    "conversations": [
       {
-        "role": "user",
-        "content": "Reply politely: I cannot log in to my account."
+        "from": "human",
+        "value": "Reply politely: I cannot log in to my account."
       }
     ],
-    "chosen": [
-      {
-        "role": "assistant",
-        "content": "Sorry you are running into this. Please share the exact error and I will help you troubleshoot it."
-      }
-    ],
-    "rejected": [
-      {
-        "role": "assistant",
-        "content": "Reset it."
-      }
-    ]
+    "chosen": {
+      "from": "gpt",
+      "value": "Sorry you are running into this. Please share the exact error and I will help you troubleshoot it."
+    },
+    "rejected": {
+      "from": "gpt",
+      "value": "Reset it."
+    }
   },
   {
-    "messages": [
+    "conversations": [
       {
-        "role": "user",
-        "content": "Explain briefly: Why should API examples be realistic?"
+        "from": "human",
+        "value": "Explain briefly: Why should API examples be realistic?"
       }
     ],
-    "chosen": [
-      {
-        "role": "assistant",
-        "content": "Realistic API examples are easier to adapt to production use."
-      }
-    ],
-    "rejected": [
-      {
-        "role": "assistant",
-        "content": "Examples are examples."
-      }
-    ]
+    "chosen": {
+      "from": "gpt",
+      "value": "Realistic API examples are easier to adapt to production use."
+    },
+    "rejected": {
+      "from": "gpt",
+      "value": "Examples are examples."
+    }
   },
   {
-    "messages": [
+    "conversations": [
       {
-        "role": "user",
-        "content": "Respond in one sentence: Why is reproducibility useful in ML experiments?"
+        "from": "human",
+        "value": "Respond in one sentence: Why is reproducibility useful in ML experiments?"
       }
     ],
-    "chosen": [
-      {
-        "role": "assistant",
-        "content": "Reproducibility helps confirm results and compare changes with confidence."
-      }
-    ],
-    "rejected": [
-      {
-        "role": "assistant",
-        "content": "It is useful for science."
-      }
-    ]
+    "chosen": {
+      "from": "gpt",
+      "value": "Reproducibility helps confirm results and compare changes with confidence."
+    },
+    "rejected": {
+      "from": "gpt",
+      "value": "It is useful for science."
+    }
   },
   {
-    "messages": [
+    "conversations": [
       {
-        "role": "user",
-        "content": "Write a concise response: Why should commit messages be clear?"
+        "from": "human",
+        "value": "Write a concise response: Why should commit messages be clear?"
       }
     ],
-    "chosen": [
-      {
-        "role": "assistant",
-        "content": "Clear commit messages make project history easier to scan and understand."
-      }
-    ],
-    "rejected": [
-      {
-        "role": "assistant",
-        "content": "So people can read them."
-      }
-    ]
+    "chosen": {
+      "from": "gpt",
+      "value": "Clear commit messages make project history easier to scan and understand."
+    },
+    "rejected": {
+      "from": "gpt",
+      "value": "So people can read them."
+    }
   },
   {
-    "messages": [
+    "conversations": [
       {
-        "role": "user",
-        "content": "One sentence only: Why are smaller batch sizes sometimes used on limited hardware?"
+        "from": "human",
+        "value": "One sentence only: Why are smaller batch sizes sometimes used on limited hardware?"
       }
     ],
-    "chosen": [
-      {
-        "role": "assistant",
-        "content": "Smaller batch sizes reduce memory usage and help training fit on constrained GPUs."
-      }
-    ],
-    "rejected": [
-      {
-        "role": "assistant",
-        "content": "Because GPUs are small."
-      }
-    ]
+    "chosen": {
+      "from": "gpt",
+      "value": "Smaller batch sizes reduce memory usage and help training fit on constrained GPUs."
+    },
+    "rejected": {
+      "from": "gpt",
+      "value": "Because GPUs are small."
+    }
   },
   {
-    "messages": [
+    "conversations": [
       {
-        "role": "user",
-        "content": "Make this more helpful: Check the docs."
+        "from": "human",
+        "value": "Make this more helpful: Check the docs."
       }
     ],
-    "chosen": [
-      {
-        "role": "assistant",
-        "content": "Please check the setup section of the docs first, and if anything is unclear I can help narrow it down."
-      }
-    ],
-    "rejected": [
-      {
-        "role": "assistant",
-        "content": "Check the docs."
-      }
-    ]
+    "chosen": {
+      "from": "gpt",
+      "value": "Please check the setup section of the docs first, and if anything is unclear I can help narrow it down."
+    },
+    "rejected": {
+      "from": "gpt",
+      "value": "Check the docs."
+    }
   },
   {
-    "messages": [
+    "conversations": [
       {
-        "role": "user",
-        "content": "Answer briefly: Why should prompts be short in tiny demos?"
+        "from": "human",
+        "value": "Answer briefly: Why should prompts be short in tiny demos?"
       }
     ],
-    "chosen": [
-      {
-        "role": "assistant",
-        "content": "Short prompts reduce memory use and make debugging training runs faster."
-      }
-    ],
-    "rejected": [
-      {
-        "role": "assistant",
-        "content": "Short is easier."
-      }
-    ]
+    "chosen": {
+      "from": "gpt",
+      "value": "Short prompts reduce memory use and make debugging training runs faster."
+    },
+    "rejected": {
+      "from": "gpt",
+      "value": "Short is easier."
+    }
   }
 ]
