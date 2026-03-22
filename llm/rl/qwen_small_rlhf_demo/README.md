@@ -13,6 +13,7 @@ These demos are intentionally tiny so they are easier to run on limited hardware
 PowerShell launchers are included:
 
 - `dpo_llamafactory/run_dpo.ps1`
+- `dpo_llamafactory/run_compare_dpo.ps1`
 - `ppo_llamafactory/run_reward_model.ps1`
 - `ppo_llamafactory/run_ppo.ps1`
 - `grpo_trl/run_grpo.ps1`
@@ -28,6 +29,17 @@ You can override it with:
 ```powershell
 $env:MODEL_PATH="E:\code\vibe\Qwen3.5-0.8B"
 ```
+
+To compare the base model with the DPO LoRA adapter on prompts from `tiny_dpo.json`:
+
+```powershell
+cd E:\code\vibe\llm\rl\qwen_small_rlhf_demo\dpo_llamafactory
+$env:MODEL_PATH="E:\code\vibe\Qwen3.5-0.8B"
+$env:ADAPTER_PATH="E:\code\vibe\llm\rl\qwen_small_rlhf_demo\dpo_llamafactory\outputs\dpo_lora"
+.\run_compare_dpo.ps1
+```
+
+This writes a JSONL file containing `prompt`, `base_output`, `lora_output`, `chosen`, and `rejected`.
 
 ## Recommended model choice
 
