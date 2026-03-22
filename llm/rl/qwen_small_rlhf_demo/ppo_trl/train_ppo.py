@@ -6,8 +6,8 @@ import torch
 import torch.nn as nn
 from datasets import Dataset
 from peft import LoraConfig
-from transformers import AutoModelForCausalLM, AutoTokenizer
-from trl import AutoModelForCausalLMWithValueHead, PPOConfig, PPOTrainer
+from transformers import AutoModelForCausalLM, AutoModelForSequenceClassification, AutoTokenizer
+from trl import PPOConfig, PPOTrainer
 
 
 class RuleRewardModel(nn.Module):
@@ -71,8 +71,9 @@ def main():
     )
 
     reward_model = RuleRewardModel(tokenizer)
-    value_model = AutoModelForCausalLMWithValueHead.from_pretrained(
+    value_model = AutoModelForSequenceClassification.from_pretrained(
         model_path,
+        num_labels=1,
         trust_remote_code=True,
         torch_dtype=torch_dtype,
         device_map="auto" if use_cuda else None,
