@@ -19,11 +19,11 @@ llamafactory-cli train \
   --lora_target all \
   --quantization_bit 4 \
   --cutoff_len 256 \
-  --max_samples 32 \
+  --max_samples 100 \
   --per_device_train_batch_size 1 \
   --gradient_accumulation_steps 4 \
-  --learning_rate 5e-5 \
-  --num_train_epochs 4.0 \
+  --learning_rate 1e-4 \
+  --num_train_epochs 10.0 \
   --logging_steps 1 \
   --save_steps 20 \
   --warmup_steps 0 \
