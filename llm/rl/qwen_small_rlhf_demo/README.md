@@ -27,6 +27,7 @@ PowerShell launchers are included:
 - `ppo_llamafactory/run_compare_ppo.ps1`
 - `ppo_trl/run_ppo.ps1`
 - `grpo_trl/run_grpo.ps1`
+- `grpo_trl/run_compare_grpo.ps1`
 - `grpo_verl/run_prepare_data.ps1`
 - `grpo_verl/run_grpo.ps1`
 
