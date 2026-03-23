@@ -50,7 +50,12 @@ def load_model(model_path: str):
 
 
 def build_inputs(tokenizer, prompt: str, device: str):
-    inputs = tokenizer(prompt, return_tensors="pt")
+    chat_text = tokenizer.apply_chat_template(
+        [{"role": "user", "content": prompt}],
+        tokenize=False,
+        add_generation_prompt=True,
+    )
+    inputs = tokenizer(chat_text, return_tensors="pt")
     return {k: v.to(device) for k, v in inputs.items()}
 
 

@@ -48,7 +48,12 @@ def cleanup_model(model):
 @torch.inference_mode()
 def generate_text(model, tokenizer, prompt: str, max_new_tokens: int):
     device = next(model.parameters()).device
-    inputs = tokenizer(prompt, return_tensors="pt")
+    chat_text = tokenizer.apply_chat_template(
+        [{"role": "user", "content": prompt}],
+        tokenize=False,
+        add_generation_prompt=True,
+    )
+    inputs = tokenizer(chat_text, return_tensors="pt")
     inputs = {k: v.to(device) for k, v in inputs.items()}
     outputs = model.generate(
         **inputs,

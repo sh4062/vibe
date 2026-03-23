@@ -49,7 +49,12 @@ def cleanup_model(model) -> None:
 
 
 def build_inputs(tokenizer, prompt: str, device: torch.device):
-    inputs = tokenizer(prompt, return_tensors="pt")
+    chat_text = tokenizer.apply_chat_template(
+        [{"role": "user", "content": prompt}],
+        tokenize=False,
+        add_generation_prompt=True,
+    )
+    inputs = tokenizer(chat_text, return_tensors="pt")
     return {k: v.to(device) for k, v in inputs.items()}
 
 
