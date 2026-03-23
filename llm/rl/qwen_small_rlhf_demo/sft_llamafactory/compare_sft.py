@@ -9,7 +9,14 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 
 def load_samples(data_path: str):
     with open(data_path, "r", encoding="utf-8") as f:
-        return json.load(f)
+        data = json.load(f)
+    return [
+        {
+            "prompt": item["messages"][0]["content"],
+            "target": item["messages"][1]["content"],
+        }
+        for item in data
+    ]
 
 
 def load_tokenizer(model_path: str):
@@ -67,13 +74,13 @@ def main():
     tokenizer = load_tokenizer(model_path)
 
     base_model = load_model(model_path)
-    base_outputs = [generate_text(base_model, tokenizer, item["instruction"], max_new_tokens) for item in samples]
+    base_outputs = [generate_text(base_model, tokenizer, item["prompt"], max_new_tokens) for item in samples]
     cleanup_model(base_model)
 
     adapted_base = load_model(model_path)
     adapted_model = PeftModel.from_pretrained(adapted_base, adapter_path)
     adapted_model.eval()
-    adapted_outputs = [generate_text(adapted_model, tokenizer, item["instruction"], max_new_tokens) for item in samples]
+    adapted_outputs = [generate_text(adapted_model, tokenizer, item["prompt"], max_new_tokens) for item in samples]
     cleanup_model(adapted_model)
 
     with open(output_path, "w", encoding="utf-8") as f:
@@ -82,8 +89,8 @@ def main():
                 json.dumps(
                     {
                         "id": idx,
-                        "prompt": item["instruction"],
-                        "target": item["output"],
+                        "prompt": item["prompt"],
+                        "target": item["target"],
                         "base_output": base_output,
                         "sft_output": sft_output,
                     },

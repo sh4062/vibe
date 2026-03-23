@@ -1,11 +1,15 @@
 {
   "tiny_sft_local": {
     "file_name": "tiny_sft.json",
-    "formatting": "alpaca",
+    "formatting": "sharegpt",
     "columns": {
-      "instruction": "instruction",
-      "input": "input",
-      "output": "output"
+      "messages": "messages"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
     }
   }
 }
