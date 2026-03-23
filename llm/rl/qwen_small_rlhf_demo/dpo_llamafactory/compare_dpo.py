@@ -98,10 +98,13 @@ def main():
         os.path.join(script_dir, "outputs", "dpo_compare.jsonl"),
     )
     max_new_tokens = int(os.environ.get("MAX_NEW_TOKENS", "64"))
+    limit_samples = int(os.environ.get("LIMIT_SAMPLES", "0"))
 
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
 
     samples = load_samples(data_path)
+    if limit_samples > 0:
+        samples = samples[:limit_samples]
     tokenizer = load_tokenizer(model_path)
     if tokenizer.pad_token_id is None:
         tokenizer.pad_token = tokenizer.eos_token

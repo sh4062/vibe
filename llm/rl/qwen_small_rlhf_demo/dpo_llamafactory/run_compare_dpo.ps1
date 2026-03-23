@@ -18,4 +18,8 @@ if (-not $env:MAX_NEW_TOKENS) {
     $env:MAX_NEW_TOKENS = "64"
 }
 
+if (-not $env:LIMIT_SAMPLES) {
+    $env:LIMIT_SAMPLES = "10"
+}
+
 python (Join-Path $ScriptDir "compare_dpo.py")

@@ -30,12 +30,22 @@
     "output": ""
   },
   {
-    "instruction": "请用一句话说明单元测试为什么有用。",
+    "instruction": "淘宝的核心收入来源有哪些？",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "请礼貌回复：我看不懂这个报错。",
+    "instruction": "淘宝的推荐系统有什么特点？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "淘宝为什么对中小商家有吸引力？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "淘宝平台治理主要关注什么？",
     "input": "",
     "output": ""
   }

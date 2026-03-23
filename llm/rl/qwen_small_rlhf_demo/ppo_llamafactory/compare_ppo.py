@@ -115,10 +115,13 @@ def main():
     )
     max_new_tokens = int(os.environ.get("MAX_NEW_TOKENS", "48"))
     sample_count = int(os.environ.get("SAMPLE_COUNT", "3"))
+    limit_samples = int(os.environ.get("LIMIT_SAMPLES", "0"))
 
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
 
     samples = load_samples(data_path)
+    if limit_samples > 0:
+        samples = samples[:limit_samples]
     tokenizer = load_tokenizer(model_path)
 
     print(f"Loaded {len(samples)} samples from {data_path}")

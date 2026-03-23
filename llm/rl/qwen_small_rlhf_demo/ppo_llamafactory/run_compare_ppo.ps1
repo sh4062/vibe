@@ -22,4 +22,8 @@ if (-not $env:SAMPLE_COUNT) {
     $env:SAMPLE_COUNT = "3"
 }
 
+if (-not $env:LIMIT_SAMPLES) {
+    $env:LIMIT_SAMPLES = "10"
+}
+
 python (Join-Path $ScriptDir "compare_ppo.py")
