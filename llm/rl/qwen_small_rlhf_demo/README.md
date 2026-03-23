@@ -1,14 +1,17 @@
 # Qwen Small RLHF Demo
 
-This folder contains five minimal demos for a locally downloaded Qwen small model:
+This folder contains six minimal demos for a locally downloaded Qwen small model:
 
 - `sft_llamafactory/`: SFT with LLaMA-Factory
 - `dpo_llamafactory/`: DPO with LLaMA-Factory
 - `ppo_llamafactory/`: Reward modeling + PPO with LLaMA-Factory
 - `ppo_trl/`: PPO with TRL and a rule-based reward
 - `grpo_trl/`: GRPO with TRL
+- `grpo_verl/`: GRPO with verl
 
 These demos are intentionally tiny so they are easier to run on limited hardware.
+
+`grpo_verl/` is the most infrastructure-heavy option in this folder. It is best treated as a separate Linux/CUDA experiment rather than a drop-in replacement for the lighter LLaMA-Factory demos.
 
 ## Windows usage
 
@@ -24,6 +27,8 @@ PowerShell launchers are included:
 - `ppo_llamafactory/run_compare_ppo.ps1`
 - `ppo_trl/run_ppo.ps1`
 - `grpo_trl/run_grpo.ps1`
+- `grpo_verl/run_prepare_data.ps1`
+- `grpo_verl/run_grpo.ps1`
 
 The default Windows model path for the DPO/SFT/PPO demos is:
 
@@ -103,7 +108,8 @@ This is not enough for a meaningful aligned model, but it is ideal for verifying
 
 1. Run `sft_llamafactory` or `dpo_llamafactory` first
 2. Run `grpo_trl` second
-3. Run `ppo_trl` or `ppo_llamafactory` last
+3. Try `grpo_verl` only if you want a more production-style RL stack and have a proper Linux/CUDA environment
+4. Run `ppo_trl` or `ppo_llamafactory` last
 
 `ppo_llamafactory` is the heaviest path because it needs a reward model checkpoint before PPO training starts.
 `ppo_trl` is lighter because it uses a rule-based reward.
