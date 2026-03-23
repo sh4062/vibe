@@ -7,13 +7,41 @@ from peft import LoraConfig
 from trl import GRPOConfig, GRPOTrainer
 
 
-def exact_match_reward(completions, ground_truth, **kwargs):
+def _completion_to_text(completion):
+    if isinstance(completion, str):
+        return completion
+    if isinstance(completion, list):
+        parts = []
+        for item in completion:
+            if isinstance(item, dict):
+                parts.append(str(item.get("content", "")))
+            else:
+                parts.append(str(item))
+        return "".join(parts)
+    if isinstance(completion, dict):
+        return str(completion.get("content", ""))
+    return str(completion)
+
+
+def refusal_reward(completions, ground_truth, **kwargs):
     rewards = []
     for completion, truth in zip(completions, ground_truth):
-        text = completion.strip()
-        match = re.search(r"-?\d+", text)
-        pred = match.group(0) if match else ""
-        rewards.append(1.0 if pred == truth else 0.0)
+        text = _completion_to_text(completion).strip()
+        if not text:
+            rewards.append(0.0)
+            continue
+
+        reward = 0.0
+        if truth in text:
+            reward += 1.0
+
+        # Encourage short, direct refusals for the Taobao prompts.
+        if truth == "无法回答。":
+            if len(text) <= 12:
+                reward += 0.2
+            if "淘宝" in text or "京东" in text:
+                reward -= 0.5
+        rewards.append(reward)
     return rewards
 
 
@@ -30,7 +58,7 @@ def main():
 
     dataset = load_dataset(
         "json",
-        data_files=os.path.join(script_dir, "data", "tiny_math.jsonl"),
+        data_files=os.path.join(script_dir, "data", "tiny_refusal.jsonl"),
         split="train",
     )
 
@@ -38,8 +66,8 @@ def main():
         "output_dir": output_dir,
         "per_device_train_batch_size": 1,
         "gradient_accumulation_steps": 4,
-        "learning_rate": 1e-5,
-        "num_train_epochs": 1,
+        "learning_rate": 5e-6,
+        "num_train_epochs": 3,
         "logging_steps": 1,
         "save_steps": 20,
         "report_to": "none",
@@ -47,9 +75,9 @@ def main():
         "fp16": True,
     }
     optional_kwargs = {
-        "max_prompt_length": 64,
-        "max_completion_length": 16,
-        "max_length": 80,
+        "max_prompt_length": 128,
+        "max_completion_length": 32,
+        "max_length": 160,
         "num_generations": 4,
         "use_vllm": False,
     }
@@ -62,7 +90,7 @@ def main():
 
     trainer = GRPOTrainer(
         model=model_path,
-        reward_funcs=exact_match_reward,
+        reward_funcs=refusal_reward,
         args=config,
         train_dataset=dataset,
         peft_config=LoraConfig(

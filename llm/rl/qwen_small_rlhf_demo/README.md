@@ -92,6 +92,22 @@ export MODEL_PATH=/your/model/path
 
 The LLaMA-Factory demos default to the `qwen` template.
 
+## Method Cheat Sheet
+
+| Method | Training signal | Reward model needed | Best for |
+| --- | --- | --- | --- |
+| `SFT` | direct target answer | No | teaching a model to answer in a specific way |
+| `DPO` | chosen vs rejected preference pairs | No | preference alignment without training a separate RM |
+| `PPO` | online reward-driven policy updates | Often yes | classic RLHF pipelines with a learned reward model |
+| `GRPO` | group-relative reward comparison | Often no | online RL with clear rule-based rewards |
+
+In this repo, the practical takeaway is:
+
+- `SFT` is the easiest way to force a visible behavior change
+- `DPO` is a good middle ground for preference learning
+- `PPO` is the longest pipeline because it usually needs reward modeling first
+- `GRPO` is a nice fit when you can write a reward rule directly
+
 ## Smallest dataset choices
 
 For low compute, the simplest route is to avoid large public datasets entirely and use local toy data:
@@ -100,7 +116,7 @@ For low compute, the simplest route is to avoid large public datasets entirely a
 - `DPO`: 8 preference pairs
 - `PPO (LLaMA-Factory)`: 8 prompts plus the same 8 preference pairs to train a tiny reward model first
 - `PPO (TRL)`: 8 prompts with a rule-based reward
-- `GRPO`: 12 arithmetic prompts with a rule-based exact-match reward
+- `GRPO`: a small prompt set with a rule-based reward; in this repo it can also be aligned to the visible `淘宝 -> 无法回答。` behavior test
 
 This is not enough for a meaningful aligned model, but it is ideal for verifying the training pipeline end to end.
 
