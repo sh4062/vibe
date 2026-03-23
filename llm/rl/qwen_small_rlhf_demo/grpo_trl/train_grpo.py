@@ -1,5 +1,6 @@
 import os
 import re
+import inspect
 
 from datasets import load_dataset
 from peft import LoraConfig
@@ -20,7 +21,7 @@ def main():
     script_dir = os.path.dirname(os.path.abspath(__file__))
     model_path = os.environ.get(
         "MODEL_PATH",
-        "/Users/a1-6/Documents/code/vibe/Qwen3.5-0.8B",
+        "Qwen/Qwen2.5-0.5B-Instruct",
     )
     output_dir = os.environ.get(
         "OUTPUT_DIR",
@@ -33,20 +34,31 @@ def main():
         split="train",
     )
 
-    config = GRPOConfig(
-        output_dir=output_dir,
-        per_device_train_batch_size=1,
-        gradient_accumulation_steps=4,
-        learning_rate=1e-5,
-        num_train_epochs=1,
-        max_prompt_length=64,
-        max_completion_length=16,
-        logging_steps=1,
-        save_steps=20,
-        report_to="none",
-        bf16=False,
-        fp16=True,
-    )
+    config_kwargs = {
+        "output_dir": output_dir,
+        "per_device_train_batch_size": 1,
+        "gradient_accumulation_steps": 4,
+        "learning_rate": 1e-5,
+        "num_train_epochs": 1,
+        "logging_steps": 1,
+        "save_steps": 20,
+        "report_to": "none",
+        "bf16": False,
+        "fp16": True,
+    }
+    optional_kwargs = {
+        "max_prompt_length": 64,
+        "max_completion_length": 16,
+        "max_length": 80,
+        "num_generations": 4,
+        "use_vllm": False,
+    }
+    accepted = inspect.signature(GRPOConfig.__init__).parameters
+    for key, value in optional_kwargs.items():
+        if key in accepted:
+            config_kwargs[key] = value
+
+    config = GRPOConfig(**config_kwargs)
 
     trainer = GRPOTrainer(
         model=model_path,
