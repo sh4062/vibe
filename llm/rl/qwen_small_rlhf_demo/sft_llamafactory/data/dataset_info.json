@@ -1,0 +1,11 @@
+{
+  "tiny_sft_local": {
+    "file_name": "tiny_sft.json",
+    "formatting": "alpaca",
+    "columns": {
+      "instruction": "instruction",
+      "input": "input",
+      "output": "output"
+    }
+  }
+}

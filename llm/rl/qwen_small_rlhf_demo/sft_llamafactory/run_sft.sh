@@ -4,16 +4,16 @@ set -euo pipefail
 SCRIPT_DIR=$(cd "$(dirname "$0")" && pwd)
 MODEL_PATH="${MODEL_PATH:-Qwen/Qwen2.5-0.5B-Instruct}"
 TEMPLATE="${TEMPLATE:-qwen}"
-OUTPUT_DIR="${OUTPUT_DIR:-$SCRIPT_DIR/outputs/dpo_lora}"
+OUTPUT_DIR="${OUTPUT_DIR:-$SCRIPT_DIR/outputs/sft_lora}"
 
 mkdir -p "$SCRIPT_DIR/outputs"
 
 llamafactory-cli train \
-  --stage dpo \
+  --stage sft \
   --do_train true \
   --model_name_or_path "$MODEL_PATH" \
   --dataset_dir "$SCRIPT_DIR/data" \
-  --dataset tiny_dpo_local \
+  --dataset tiny_sft_local \
   --template "$TEMPLATE" \
   --finetuning_type lora \
   --lora_target all \

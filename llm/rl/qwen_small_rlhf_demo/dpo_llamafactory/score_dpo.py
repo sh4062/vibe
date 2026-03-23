@@ -135,7 +135,7 @@ def summarize(rows: list[dict[str, Any]], label: str) -> dict[str, Any]:
 
 def main():
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    model_path = os.environ.get("MODEL_PATH", r"E:\code\vibe\Qwen3.5-0.8B")
+    model_path = os.environ.get("MODEL_PATH", r"E:\code\vibe\Qwen2.5-0.5B-Instruct")
     adapter_path = os.environ.get(
         "ADAPTER_PATH",
         os.path.join(script_dir, "outputs", "dpo_lora"),

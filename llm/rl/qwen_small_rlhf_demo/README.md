@@ -1,7 +1,8 @@
 # Qwen Small RLHF Demo
 
-This folder contains four minimal demos for a locally downloaded Qwen small model:
+This folder contains five minimal demos for a locally downloaded Qwen small model:
 
+- `sft_llamafactory/`: SFT with LLaMA-Factory
 - `dpo_llamafactory/`: DPO with LLaMA-Factory
 - `ppo_llamafactory/`: Reward modeling + PPO with LLaMA-Factory
 - `ppo_trl/`: PPO with TRL and a rule-based reward
@@ -13,6 +14,8 @@ These demos are intentionally tiny so they are easier to run on limited hardware
 
 PowerShell launchers are included:
 
+- `sft_llamafactory/run_sft.ps1`
+- `sft_llamafactory/run_compare_sft.ps1`
 - `dpo_llamafactory/run_dpo.ps1`
 - `dpo_llamafactory/run_compare_dpo.ps1`
 - `dpo_llamafactory/run_score_dpo.ps1`
@@ -22,23 +25,23 @@ PowerShell launchers are included:
 - `ppo_trl/run_ppo.ps1`
 - `grpo_trl/run_grpo.ps1`
 
-The default Windows model path is:
+The default Windows model path for the DPO/SFT/PPO demos is:
 
 ```powershell
-E:\code\vibe\Qwen3.5-0.8B
+E:\code\vibe\Qwen2.5-0.5B-Instruct
 ```
 
 You can override it with:
 
 ```powershell
-$env:MODEL_PATH="E:\code\vibe\Qwen3.5-0.8B"
+$env:MODEL_PATH="E:\code\vibe\Qwen2.5-0.5B-Instruct"
 ```
 
 To compare the base model with the DPO LoRA adapter on prompts from `tiny_dpo.json`:
 
 ```powershell
 cd E:\code\vibe\llm\rl\qwen_small_rlhf_demo\dpo_llamafactory
-$env:MODEL_PATH="E:\code\vibe\Qwen3.5-0.8B"
+$env:MODEL_PATH="E:\code\vibe\Qwen2.5-0.5B-Instruct"
 $env:ADAPTER_PATH="E:\code\vibe\llm\rl\qwen_small_rlhf_demo\dpo_llamafactory\outputs\dpo_lora"
 .\run_compare_dpo.ps1
 ```
@@ -49,7 +52,7 @@ To score whether the DPO adapter assigns higher probability to `chosen` than `re
 
 ```powershell
 cd E:\code\vibe\llm\rl\qwen_small_rlhf_demo\dpo_llamafactory
-$env:MODEL_PATH="E:\code\vibe\Qwen3.5-0.8B"
+$env:MODEL_PATH="E:\code\vibe\Qwen2.5-0.5B-Instruct"
 $env:ADAPTER_PATH="E:\code\vibe\llm\rl\qwen_small_rlhf_demo\dpo_llamafactory\outputs\dpo_lora"
 .\run_score_dpo.ps1
 ```
@@ -58,16 +61,16 @@ This writes `outputs\dpo_score.json` with base-vs-LoRA margins for each sample.
 
 ## Recommended model choice
 
-You said you already downloaded:
+For the DPO/SFT/PPO demos, the recommended smallest instruct checkpoint is:
 
 ```bash
-huggingface-cli download Qwen/Qwen3.5-0.8B --local-dir ./Qwen3.5-0.8B
+huggingface-cli download Qwen/Qwen2.5-0.5B-Instruct --local-dir ./Qwen2.5-0.5B-Instruct
 ```
 
 The scripts default to:
 
 ```bash
-/Users/a1-6/Documents/code/vibe/Qwen3.5-0.8B
+Qwen/Qwen2.5-0.5B-Instruct
 ```
 
 If you actually downloaded the model somewhere else, set:
@@ -76,19 +79,20 @@ If you actually downloaded the model somewhere else, set:
 export MODEL_PATH=/your/model/path
 ```
 
-If you later switch to an instruct checkpoint, also set a chat template, for example:
+If you later switch to a local path, set:
 
 ```bash
-export TEMPLATE=qwen3
+export MODEL_PATH=/your/model/path
 ```
 
-For a base checkpoint, `default` is the safest starting point in these demos.
+The LLaMA-Factory demos default to the `qwen` template.
 
 ## Smallest dataset choices
 
 For low compute, the simplest route is to avoid large public datasets entirely and use local toy data:
 
-- `DPO`: 8 hand-written preference pairs
+- `SFT`: 8 instruction-output pairs
+- `DPO`: 8 preference pairs
 - `PPO (LLaMA-Factory)`: 8 prompts plus the same 8 preference pairs to train a tiny reward model first
 - `PPO (TRL)`: 8 prompts with a rule-based reward
 - `GRPO`: 12 arithmetic prompts with a rule-based exact-match reward
@@ -97,16 +101,25 @@ This is not enough for a meaningful aligned model, but it is ideal for verifying
 
 ## Suggested order
 
-1. Run `dpo_llamafactory` first
+1. Run `sft_llamafactory` or `dpo_llamafactory` first
 2. Run `grpo_trl` second
 3. Run `ppo_trl` or `ppo_llamafactory` last
 
 `ppo_llamafactory` is the heaviest path because it needs a reward model checkpoint before PPO training starts.
 `ppo_trl` is lighter because it uses a rule-based reward.
 
-For `ppo_llamafactory`, a smaller instruct checkpoint such as `Qwen/Qwen2.5-0.5B-Instruct` is recommended over `Qwen3.5-0.8B` because PPO and reward-model tooling is currently more stable there.
+For the visible keyword-based behavior test, `sft_llamafactory` and `dpo_llamafactory` should show stronger changes than PPO.
 
-The bundled PPO demo data also includes a visible behavior test: several prompts containing `淘宝` prefer the response `无法回答。`, so you can quickly inspect whether the trained policy starts following that pattern.
+The bundled SFT/DPO/PPO demo data includes a visible behavior test: several prompts containing `淘宝` prefer the response `无法回答。`, so you can quickly inspect whether the trained policy starts following that pattern.
+
+To compare the base model with the SFT LoRA adapter on the bundled prompts:
+
+```powershell
+cd E:\code\vibe\llm\rl\qwen_small_rlhf_demo\sft_llamafactory
+$env:MODEL_PATH="E:\code\vibe\Qwen2.5-0.5B-Instruct"
+$env:ADAPTER_PATH="E:\code\vibe\llm\rl\qwen_small_rlhf_demo\sft_llamafactory\outputs\sft_lora"
+.\run_compare_sft.ps1
+```
 
 To compare the base model with the PPO LoRA adapter on the bundled prompts:
 

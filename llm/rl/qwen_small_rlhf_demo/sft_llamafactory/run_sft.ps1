@@ -10,18 +10,16 @@ if (-not $env:TEMPLATE) {
     $env:TEMPLATE = "qwen"
 }
 
-if (-not $env:OUTPUT_DIR) {
-    $env:OUTPUT_DIR = Join-Path $ScriptDir "outputs\dpo_lora"
-}
+$env:OUTPUT_DIR = Join-Path $ScriptDir "outputs\sft_lora"
 
 New-Item -ItemType Directory -Force -Path (Join-Path $ScriptDir "outputs") | Out-Null
 
 llamafactory-cli train `
-  --stage dpo `
+  --stage sft `
   --do_train true `
   --model_name_or_path $env:MODEL_PATH `
   --dataset_dir (Join-Path $ScriptDir "data") `
-  --dataset tiny_dpo_local `
+  --dataset tiny_sft_local `
   --template $env:TEMPLATE `
   --finetuning_type lora `
   --lora_target all `

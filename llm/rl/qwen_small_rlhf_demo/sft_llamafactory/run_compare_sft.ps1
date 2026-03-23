@@ -7,11 +7,9 @@ if (-not $env:MODEL_PATH) {
 }
 
 if (-not $env:ADAPTER_PATH) {
-    $env:ADAPTER_PATH = Join-Path $ScriptDir "outputs\dpo_lora"
+    $env:ADAPTER_PATH = Join-Path $ScriptDir "outputs\sft_lora"
 }
 
-if (-not $env:SCORE_OUTPUT) {
-    $env:SCORE_OUTPUT = Join-Path $ScriptDir "outputs\dpo_score.json"
-}
+$env:COMPARE_OUTPUT = Join-Path $ScriptDir "outputs\sft_compare.jsonl"
 
-python (Join-Path $ScriptDir "score_dpo.py")
+python (Join-Path $ScriptDir "compare_sft.py")
