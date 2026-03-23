@@ -8,3 +8,7 @@
 # Hugging Face local/cache directories
 /.cache/
 /huggingface/
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+checkpoint*/
