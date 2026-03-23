@@ -1,6 +1,47 @@
 import os
-import re
 import inspect
+import json
+
+
+def _plot_metric(log_history, key, output_path):
+    try:
+        import matplotlib.pyplot as plt
+    except Exception:
+        return False
+
+    points = [(item.get("epoch"), item.get(key)) for item in log_history if key in item and item.get("epoch") is not None]
+    points = [(x, y) for x, y in points if y is not None]
+    if not points:
+        return False
+
+    xs, ys = zip(*points)
+    plt.figure(figsize=(6, 4))
+    plt.plot(xs, ys, marker="o", linewidth=1.5)
+    plt.xlabel("epoch")
+    plt.ylabel(key)
+    plt.title(key)
+    plt.tight_layout()
+    plt.savefig(output_path, dpi=150)
+    plt.close()
+    return True
+
+
+def _save_training_artifacts(trainer, output_dir):
+    os.makedirs(output_dir, exist_ok=True)
+    trainer.save_model(output_dir)
+    trainer.save_state()
+
+    log_path = os.path.join(output_dir, "trainer_log.jsonl")
+    with open(log_path, "w", encoding="utf-8") as f:
+        for item in trainer.state.log_history:
+            f.write(json.dumps(item, ensure_ascii=False) + "\n")
+
+    loss_path = os.path.join(output_dir, "training_loss.png")
+    reward_path = os.path.join(output_dir, "training_reward.png")
+    if _plot_metric(trainer.state.log_history, "loss", loss_path):
+        print(f"Figure saved at: {loss_path}")
+    if _plot_metric(trainer.state.log_history, "reward", reward_path):
+        print(f"Figure saved at: {reward_path}")
 
 from datasets import load_dataset
 from peft import LoraConfig
@@ -23,6 +64,20 @@ def _completion_to_text(completion):
     return str(completion)
 
 
+def _extract_json(text: str):
+    text = text.strip()
+    if not text:
+        return None
+    start = text.find("{")
+    end = text.rfind("}")
+    if start == -1 or end == -1 or end < start:
+        return None
+    try:
+        return json.loads(text[start : end + 1])
+    except json.JSONDecodeError:
+        return None
+
+
 def refusal_reward(completions, ground_truth, **kwargs):
     rewards = []
     for completion, truth in zip(completions, ground_truth):
@@ -32,15 +87,28 @@ def refusal_reward(completions, ground_truth, **kwargs):
             continue
 
         reward = 0.0
-        if truth in text:
-            reward += 1.0
+        parsed = _extract_json(text)
+        truth_obj = json.loads(truth)
+        truth_answer = truth_obj["answer"]
 
-        # Encourage short, direct refusals for the Taobao prompts.
-        if truth == "无法回答。":
-            if len(text) <= 12:
+        # Strongly reward valid JSON with the expected schema.
+        if parsed is not None:
+            reward += 0.8
+            if isinstance(parsed, dict) and "answer" in parsed:
+                reward += 0.4
+                answer = str(parsed["answer"]).strip()
+                if answer == truth_answer:
+                    reward += 1.0
+                elif truth_answer in answer:
+                    reward += 0.5
+                if len(answer) <= 16:
+                    reward += 0.1
+                if truth_answer == "无法回答。" and ("淘宝" in answer or "京东" in answer):
+                    reward -= 0.5
+        else:
+            # Small reward if the plain text still contains the target, but prefer JSON strongly.
+            if truth_answer in text:
                 reward += 0.2
-            if "淘宝" in text or "京东" in text:
-                reward -= 0.5
         rewards.append(reward)
     return rewards
 
@@ -66,7 +134,7 @@ def main():
         "output_dir": output_dir,
         "per_device_train_batch_size": 1,
         "gradient_accumulation_steps": 4,
-        "learning_rate": 5e-6,
+        "learning_rate": 1e-5,
         "num_train_epochs": 3,
         "logging_steps": 1,
         "save_steps": 20,
@@ -76,8 +144,8 @@ def main():
     }
     optional_kwargs = {
         "max_prompt_length": 128,
-        "max_completion_length": 32,
-        "max_length": 160,
+        "max_completion_length": 48,
+        "max_length": 176,
         "num_generations": 4,
         "use_vllm": False,
     }
@@ -102,6 +170,7 @@ def main():
         ),
     )
     trainer.train()
+    _save_training_artifacts(trainer, output_dir)
 
 
 if __name__ == "__main__":
