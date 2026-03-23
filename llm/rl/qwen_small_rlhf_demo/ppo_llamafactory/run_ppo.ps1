@@ -2,18 +2,16 @@ $ErrorActionPreference = "Stop"
 
 $ScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
 
+@("TEMPLATE", "REWARD_MODEL_PATH", "OUTPUT_DIR") | ForEach-Object {
+    Remove-Item "Env:$_" -ErrorAction SilentlyContinue
+}
+
 if (-not $env:MODEL_PATH) {
     $env:MODEL_PATH = "Qwen/Qwen2.5-0.5B-Instruct"
 }
 
-if (-not $env:TEMPLATE) {
-    $env:TEMPLATE = "qwen"
-}
-
-if (-not $env:REWARD_MODEL_PATH) {
-    $env:REWARD_MODEL_PATH = Join-Path $ScriptDir "outputs\reward_model_lora"
-}
-
+$env:TEMPLATE = "qwen"
+$env:REWARD_MODEL_PATH = Join-Path $ScriptDir "outputs\reward_model_lora"
 $env:OUTPUT_DIR = Join-Path $ScriptDir "outputs\ppo_lora"
 
 New-Item -ItemType Directory -Force -Path (Join-Path $ScriptDir "outputs") | Out-Null
