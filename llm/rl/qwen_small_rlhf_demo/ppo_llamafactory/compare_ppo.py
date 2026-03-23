@@ -54,20 +54,43 @@ def build_inputs(tokenizer, prompt: str, device: torch.device):
 
 
 @torch.inference_mode()
-def generate_text(model, tokenizer, prompt: str, max_new_tokens: int) -> str:
+def generate_text(
+    model,
+    tokenizer,
+    prompt: str,
+    max_new_tokens: int,
+    do_sample: bool,
+    temperature: float,
+    top_p: float,
+) -> str:
     device = next(model.parameters()).device
     inputs = build_inputs(tokenizer, prompt, device)
     outputs = model.generate(
         **inputs,
         max_new_tokens=max_new_tokens,
-        do_sample=False,
-        temperature=1.0,
-        top_p=1.0,
+        do_sample=do_sample,
+        temperature=temperature,
+        top_p=top_p,
         pad_token_id=tokenizer.pad_token_id,
         eos_token_id=tokenizer.eos_token_id,
     )
     new_tokens = outputs[0][inputs["input_ids"].shape[1] :]
     return tokenizer.decode(new_tokens, skip_special_tokens=True).strip()
+
+
+def sample_many(model, tokenizer, prompt: str, max_new_tokens: int, sample_count: int) -> list[str]:
+    return [
+        generate_text(
+            model,
+            tokenizer,
+            prompt,
+            max_new_tokens=max_new_tokens,
+            do_sample=True,
+            temperature=0.7,
+            top_p=0.9,
+        )
+        for _ in range(sample_count)
+    ]
 
 
 def main():
@@ -86,6 +109,7 @@ def main():
         os.path.join(script_dir, "outputs", "ppo_compare.jsonl"),
     )
     max_new_tokens = int(os.environ.get("MAX_NEW_TOKENS", "48"))
+    sample_count = int(os.environ.get("SAMPLE_COUNT", "3"))
 
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
 
@@ -98,8 +122,20 @@ def main():
 
     print("Generating base model outputs...")
     base_model = load_model(model_path)
-    base_outputs = [
-        generate_text(base_model, tokenizer, sample["prompt"], max_new_tokens)
+    base_greedy_outputs = [
+        generate_text(
+            base_model,
+            tokenizer,
+            sample["prompt"],
+            max_new_tokens=max_new_tokens,
+            do_sample=False,
+            temperature=1.0,
+            top_p=1.0,
+        )
+        for sample in samples
+    ]
+    base_sample_outputs = [
+        sample_many(base_model, tokenizer, sample["prompt"], max_new_tokens, sample_count)
         for sample in samples
     ]
     cleanup_model(base_model)
@@ -108,19 +144,39 @@ def main():
     adapted_base = load_model(model_path)
     adapted_model = PeftModel.from_pretrained(adapted_base, adapter_path)
     adapted_model.eval()
-    adapted_outputs = [
-        generate_text(adapted_model, tokenizer, sample["prompt"], max_new_tokens)
+    adapted_greedy_outputs = [
+        generate_text(
+            adapted_model,
+            tokenizer,
+            sample["prompt"],
+            max_new_tokens=max_new_tokens,
+            do_sample=False,
+            temperature=1.0,
+            top_p=1.0,
+        )
+        for sample in samples
+    ]
+    adapted_sample_outputs = [
+        sample_many(adapted_model, tokenizer, sample["prompt"], max_new_tokens, sample_count)
         for sample in samples
     ]
     cleanup_model(adapted_model)
 
     with open(output_path, "w", encoding="utf-8") as f:
-        for sample, base_output, adapted_output in zip(samples, base_outputs, adapted_outputs):
+        for sample, base_greedy, base_samples, adapted_greedy, adapted_samples in zip(
+            samples,
+            base_greedy_outputs,
+            base_sample_outputs,
+            adapted_greedy_outputs,
+            adapted_sample_outputs,
+        ):
             record = {
                 "id": sample["id"],
                 "prompt": sample["prompt"],
-                "base_output": base_output,
-                "ppo_output": adapted_output,
+                "base_greedy": base_greedy,
+                "ppo_greedy": adapted_greedy,
+                "base_samples": base_samples,
+                "ppo_samples": adapted_samples,
             }
             f.write(json.dumps(record, ensure_ascii=False) + "\n")
 

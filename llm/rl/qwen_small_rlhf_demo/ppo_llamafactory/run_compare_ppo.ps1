@@ -18,4 +18,8 @@ if (-not $env:MAX_NEW_TOKENS) {
     $env:MAX_NEW_TOKENS = "48"
 }
 
+if (-not $env:SAMPLE_COUNT) {
+    $env:SAMPLE_COUNT = "3"
+}
+
 python (Join-Path $ScriptDir "compare_ppo.py")

@@ -18,6 +18,7 @@ PowerShell launchers are included:
 - `dpo_llamafactory/run_score_dpo.ps1`
 - `ppo_llamafactory/run_reward_model.ps1`
 - `ppo_llamafactory/run_ppo.ps1`
+- `ppo_llamafactory/run_compare_ppo.ps1`
 - `ppo_trl/run_ppo.ps1`
 - `grpo_trl/run_grpo.ps1`
 
@@ -104,6 +105,19 @@ This is not enough for a meaningful aligned model, but it is ideal for verifying
 `ppo_trl` is lighter because it uses a rule-based reward.
 
 For `ppo_llamafactory`, a smaller instruct checkpoint such as `Qwen/Qwen2.5-0.5B-Instruct` is recommended over `Qwen3.5-0.8B` because PPO and reward-model tooling is currently more stable there.
+
+The bundled PPO demo data also includes a visible behavior test: several prompts containing `淘宝` prefer the response `无法回答。`, so you can quickly inspect whether the trained policy starts following that pattern.
+
+To compare the base model with the PPO LoRA adapter on the bundled prompts:
+
+```powershell
+cd E:\code\vibe\llm\rl\qwen_small_rlhf_demo\ppo_llamafactory
+$env:MODEL_PATH="E:\code\vibe\Qwen2.5-0.5B-Instruct"
+$env:ADAPTER_PATH="E:\code\vibe\llm\rl\qwen_small_rlhf_demo\ppo_llamafactory\outputs\ppo_lora"
+.\run_compare_ppo.ps1
+```
+
+This writes `outputs\ppo_compare.jsonl` with `prompt`, `base_output`, and `ppo_output`.
 
 ## References
 
