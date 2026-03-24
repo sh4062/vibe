@@ -156,13 +156,14 @@ def main():
     optional_kwargs = {
         "bf16": True,
         "fp16": False,
-        "max_completion_length": 64,
+        "max_completion_length": 160,
         "num_generations": 4,
         "per_device_train_batch_size": 1,
         "eval_strategy": "steps",
         "eval_steps": 25,
         "save_strategy": "steps",
         "max_prompt_length": 512,
+        "max_length": 768,
     }
 
     accepted = inspect.signature(GRPOConfig.__init__).parameters
