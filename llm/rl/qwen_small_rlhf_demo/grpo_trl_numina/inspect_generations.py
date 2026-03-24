@@ -1,6 +1,7 @@
 import gc
 import json
 import os
+import re
 
 import torch
 from datasets import load_dataset
@@ -9,11 +10,10 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 
 
 SYSTEM_PROMPT = (
-    "A conversation between User and Assistant. The user asks a question, and the Assistant solves it. "
-    "The assistant first thinks about the reasoning process in the mind and then provides the user with the answer. "
-    "The reasoning process and answer are enclosed within <think> </think> and <answer> </answer> tags, respectively, "
-    "i.e., <think> reasoning process here </think><answer> answer here </answer>."
+    "Reply strictly in this format: <think>reasoning</think><answer>final answer</answer>. "
+    "Do not add any text before or after the tags."
 )
+FORMAT_PATTERN = re.compile(r"^<think>.*?</think>\s*<answer>.*?</answer>$", flags=re.DOTALL)
 
 
 def load_tokenizer(model_path: str):
@@ -69,6 +69,23 @@ def generate_text(model, tokenizer, problem: str, max_new_tokens: int, do_sample
     return tokenizer.decode(new_tokens, skip_special_tokens=True)
 
 
+def format_match(text: str) -> bool:
+    return bool(FORMAT_PATTERN.match(text.strip()))
+
+
+def sample_many(model, tokenizer, problem: str, max_new_tokens: int, sample_count: int):
+    outputs = []
+    for _ in range(sample_count):
+        text = generate_text(model, tokenizer, problem, max_new_tokens, do_sample=True)
+        outputs.append(
+            {
+                "text": text,
+                "format_match": format_match(text),
+            }
+        )
+    return outputs
+
+
 def main():
     script_dir = os.path.dirname(os.path.abspath(__file__))
     model_path = os.environ.get("MODEL_PATH", "Qwen/Qwen2.5-0.5B-Instruct")
@@ -77,6 +94,7 @@ def main():
     split = os.environ.get("INSPECT_SPLIT", "test[:5]")
     output_path = os.environ.get("INSPECT_OUTPUT", os.path.join(script_dir, "outputs", "inspect_generations.jsonl"))
     max_new_tokens = int(os.environ.get("MAX_NEW_TOKENS", "256"))
+    sample_count = int(os.environ.get("SAMPLE_COUNT", "4"))
 
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
 
@@ -88,12 +106,17 @@ def main():
     base_model = load_model(model_path)
     base_rows = []
     for item in dataset:
+        base_greedy = generate_text(base_model, tokenizer, item["problem"], max_new_tokens, do_sample=False)
+        base_samples = sample_many(base_model, tokenizer, item["problem"], max_new_tokens, sample_count)
         base_rows.append(
             {
                 "problem": item["problem"],
                 "solution": item["solution"],
-                "base_greedy": generate_text(base_model, tokenizer, item["problem"], max_new_tokens, do_sample=False),
-                "base_sample": generate_text(base_model, tokenizer, item["problem"], max_new_tokens, do_sample=True),
+                "base_greedy": base_greedy,
+                "base_greedy_format_match": format_match(base_greedy),
+                "base_samples": base_samples,
+                "base_format_hits": sum(1 for sample in base_samples if sample["format_match"]),
+                "base_sample_count": sample_count,
             }
         )
     cleanup_model(base_model)
@@ -105,14 +128,21 @@ def main():
     with open(output_path, "w", encoding="utf-8") as f:
         for row in base_rows:
             lo_ra_greedy = generate_text(adapted_model, tokenizer, row["problem"], max_new_tokens, do_sample=False)
-            lo_ra_sample = generate_text(adapted_model, tokenizer, row["problem"], max_new_tokens, do_sample=True)
+            lo_ra_samples = sample_many(adapted_model, tokenizer, row["problem"], max_new_tokens, sample_count)
             record = {
                 "problem": row["problem"],
                 "solution": row["solution"],
+                "system_prompt": SYSTEM_PROMPT,
                 "base_greedy": row["base_greedy"],
-                "base_sample": row["base_sample"],
+                "base_greedy_format_match": row["base_greedy_format_match"],
+                "base_samples": row["base_samples"],
+                "base_format_hits": row["base_format_hits"],
+                "base_sample_count": row["base_sample_count"],
                 "grpo_greedy": lo_ra_greedy,
-                "grpo_sample": lo_ra_sample,
+                "grpo_greedy_format_match": format_match(lo_ra_greedy),
+                "grpo_samples": lo_ra_samples,
+                "grpo_format_hits": sum(1 for sample in lo_ra_samples if sample["format_match"]),
+                "grpo_sample_count": sample_count,
             }
             f.write(json.dumps(record, ensure_ascii=False) + "\n")
     cleanup_model(adapted_model)
