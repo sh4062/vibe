@@ -11,10 +11,8 @@ from transformers import TrainerCallback
 
 
 SYSTEM_PROMPT = (
-    "A conversation between User and Assistant. The user asks a question, and the Assistant solves it. "
-    "The assistant first thinks about the reasoning process in the mind and then provides the user with the answer. "
-    "The reasoning process and answer are enclosed within <think> </think> and <answer> </answer> tags, respectively, "
-    "i.e., <think> reasoning process here </think><answer> answer here </answer>."
+    "Reply strictly in this format: <think>reasoning</think><answer>final answer</answer>. "
+    "Do not add any text before or after the tags."
 )
 
 
@@ -204,9 +202,9 @@ def main():
         callbacks=[PlotEveryNStepsCallback(output_dir, every_n_steps=10)],
         peft_config=LoraConfig(
             r=8,
-            lora_alpha=16,
-            lora_dropout=0.05,
-            target_modules="all-linear",
+            lora_alpha=32,
+            lora_dropout=0.1,
+            target_modules=["q_proj", "v_proj"],
             task_type="CAUSAL_LM",
         ),
     )
