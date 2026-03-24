@@ -7,6 +7,7 @@ This folder contains six minimal demos for a locally downloaded Qwen small model
 - `ppo_llamafactory/`: Reward modeling + PPO with LLaMA-Factory
 - `ppo_trl/`: PPO with TRL and a rule-based reward
 - `grpo_trl/`: GRPO with TRL
+- `grpo_trl_numina/`: GRPO with TRL on `AI-MO/NuminaMath-TIR`
 - `grpo_verl/`: GRPO with verl
 
 These demos are intentionally tiny so they are easier to run on limited hardware.
@@ -29,6 +30,7 @@ PowerShell launchers are included:
 - `ppo_trl/run_ppo.ps1`
 - `grpo_trl/run_grpo.ps1`
 - `grpo_trl/run_compare_grpo.ps1`
+- `grpo_trl_numina/run_grpo.ps1`
 - `grpo_verl/run_prepare_data.ps1`
 - `grpo_verl/run_grpo.ps1`
 
