@@ -50,452 +50,2452 @@
     "output": ""
   },
   {
-    "instruction": "请概括淘宝的用户画像。",
+    "instruction": "淘宝的支付链路一般是什么样？",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝和拼多多在运营上有什么差异？",
+    "instruction": "淘宝和天猫的关系是什么？",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝店铺流量一般来自哪里？",
+    "instruction": "淘宝商家常用哪些促销方式？",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝直播为什么重要？",
+    "instruction": "淘宝为什么适合长尾商品交易？",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝在移动端增长上做了什么？",
+    "instruction": "淘宝和拼多多的定位有何不同？",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝的商家生态有什么特点？",
+    "instruction": "淘宝搜索和推荐为什么重要？",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝的促销活动对用户行为有什么影响？",
+    "instruction": "淘宝的商家生态体现在哪些方面？",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝为什么能长期保持竞争力？",
+    "instruction": "淘宝的商业价值体现在哪些方面？",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝的内容化运营体现在哪些方面？",
+    "instruction": "淘宝为什么能持续吸引消费者？",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝搜索和推荐之间有什么关系？",
+    "instruction": "淘宝在移动互联网时代经历了什么变化？",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "请评价淘宝在中国电商中的地位。",
+    "instruction": "请介绍一下淘宝的商业模式。 请简短回答。",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝的盈利结构可以怎么概括？",
+    "instruction": "帮我总结淘宝的发展历史。 请简短回答。",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝平台如何提升转化率？",
+    "instruction": "淘宝和京东有什么区别？ 请简短回答。",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝和天猫的定位有什么差异？",
+    "instruction": "淘宝为什么能吸引这么多商家？ 请简短回答。",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝的商品供给为什么丰富？",
+    "instruction": "请简单分析淘宝直播的作用。 请简短回答。",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝首页为什么要做个性化推荐？",
+    "instruction": "你怎么看淘宝的用户增长策略？ 请简短回答。",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝商家最看重哪些平台能力？",
+    "instruction": "淘宝的核心收入来源有哪些？ 请简短回答。",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝在用户留存上通常会怎么做？",
+    "instruction": "淘宝的推荐系统有什么特点？ 请简短回答。",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝为什么适合做品牌和白牌共存的平台？",
+    "instruction": "淘宝为什么对中小商家有吸引力？ 请简短回答。",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝的用户增长逻辑是什么？",
+    "instruction": "淘宝平台治理主要关注什么？ 请简短回答。",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝的商业闭环由哪些部分构成？",
+    "instruction": "淘宝的支付链路一般是什么样？ 请简短回答。",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "请从平台角度分析淘宝。",
+    "instruction": "淘宝和天猫的关系是什么？ 请简短回答。",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "请从商家角度分析淘宝。",
+    "instruction": "淘宝商家常用哪些促销方式？ 请简短回答。",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "请从用户角度分析淘宝。",
+    "instruction": "淘宝为什么适合长尾商品交易？ 请简短回答。",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝为什么会做双十一活动？",
+    "instruction": "淘宝和拼多多的定位有何不同？ 请简短回答。",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝的竞争优势体现在哪？",
+    "instruction": "淘宝搜索和推荐为什么重要？ 请简短回答。",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝的生态位是什么？",
+    "instruction": "淘宝的商家生态体现在哪些方面？ 请简短回答。",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝给商家带来的核心价值是什么？",
+    "instruction": "淘宝的商业价值体现在哪些方面？ 请简短回答。",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝的广告系统为什么重要？",
+    "instruction": "淘宝为什么能持续吸引消费者？ 请简短回答。",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝的交易撮合机制如何理解？",
+    "instruction": "淘宝在移动互联网时代经历了什么变化？ 请简短回答。",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝和抖音电商的区别是什么？",
+    "instruction": "请介绍一下淘宝的商业模式。 请只用一句话回答。",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝为什么要做直播带货？",
+    "instruction": "帮我总结淘宝的发展历史。 请只用一句话回答。",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝平台的网络效应体现在哪？",
+    "instruction": "淘宝和京东有什么区别？ 请只用一句话回答。",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝是如何提升用户停留时长的？",
+    "instruction": "淘宝为什么能吸引这么多商家？ 请只用一句话回答。",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝为什么会有这么多长尾商品？",
+    "instruction": "请简单分析淘宝直播的作用。 请只用一句话回答。",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝在平台治理上会面临什么挑战？",
+    "instruction": "你怎么看淘宝的用户增长策略？ 请只用一句话回答。",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝为什么能形成规模优势？",
+    "instruction": "淘宝的核心收入来源有哪些？ 请只用一句话回答。",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝和拼多多在用户心智上有什么不同？",
+    "instruction": "淘宝的推荐系统有什么特点？ 请只用一句话回答。",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝的供给侧优势主要来自哪里？",
+    "instruction": "淘宝为什么对中小商家有吸引力？ 请只用一句话回答。",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝对品牌商家的吸引力在哪里？",
+    "instruction": "淘宝平台治理主要关注什么？ 请只用一句话回答。",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝对中小卖家的吸引力在哪里？",
+    "instruction": "淘宝的支付链路一般是什么样？ 请只用一句话回答。",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝为什么适合做多品类经营？",
+    "instruction": "淘宝和天猫的关系是什么？ 请只用一句话回答。",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝的运营效率体现在哪些方面？",
+    "instruction": "淘宝商家常用哪些促销方式？ 请只用一句话回答。",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝是如何平衡商家和用户需求的？",
+    "instruction": "淘宝为什么适合长尾商品交易？ 请只用一句话回答。",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝为什么要重视搜索体验？",
+    "instruction": "淘宝和拼多多的定位有何不同？ 请只用一句话回答。",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝为什么要重视推荐体验？",
+    "instruction": "淘宝搜索和推荐为什么重要？ 请只用一句话回答。",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝的消费者运营一般包含什么？",
+    "instruction": "淘宝的商家生态体现在哪些方面？ 请只用一句话回答。",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝的商家运营一般包含什么？",
+    "instruction": "淘宝的商业价值体现在哪些方面？ 请只用一句话回答。",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝为什么强调内容和交易结合？",
+    "instruction": "淘宝为什么能持续吸引消费者？ 请只用一句话回答。",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝为什么能承载丰富的商品供给？",
+    "instruction": "淘宝在移动互联网时代经历了什么变化？ 请只用一句话回答。",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝用户为什么会频繁回访？",
+    "instruction": "请你回答这个问题：请介绍一下淘宝的商业模式。",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝平台的核心飞轮是什么？",
+    "instruction": "请你回答这个问题：帮我总结淘宝的发展历史。",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝为什么适合做流量分发？",
+    "instruction": "请你回答这个问题：淘宝和京东有什么区别？",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝为什么能连接大量买家和卖家？",
+    "instruction": "请你回答这个问题：淘宝为什么能吸引这么多商家？",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝平台的价值链可以怎么理解？",
+    "instruction": "请你回答这个问题：请简单分析淘宝直播的作用。",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝和电商平台相比最大的特点是什么？",
+    "instruction": "请你回答这个问题：你怎么看淘宝的用户增长策略？",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝为什么会重视商家工具建设？",
+    "instruction": "请你回答这个问题：淘宝的核心收入来源有哪些？",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝的商业逻辑可以怎么概括？",
+    "instruction": "请你回答这个问题：淘宝的推荐系统有什么特点？",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝为什么能做大规模促销？",
+    "instruction": "请你回答这个问题：淘宝为什么对中小商家有吸引力？",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝为什么能吸引用户反复打开？",
+    "instruction": "请你回答这个问题：淘宝平台治理主要关注什么？",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝在平台策略上最重要的是什么？",
+    "instruction": "请你回答这个问题：淘宝的支付链路一般是什么样？",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝在内容生态上的关键动作是什么？",
+    "instruction": "请你回答这个问题：淘宝和天猫的关系是什么？",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝在交易生态上的关键动作是什么？",
+    "instruction": "请你回答这个问题：淘宝商家常用哪些促销方式？",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝在流量分发上的关键动作是什么？",
+    "instruction": "请你回答这个问题：淘宝为什么适合长尾商品交易？",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝在用户心智里的典型标签是什么？",
+    "instruction": "请你回答这个问题：淘宝和拼多多的定位有何不同？",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝在品牌建设上的核心抓手是什么？",
+    "instruction": "请你回答这个问题：淘宝搜索和推荐为什么重要？",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝在供给丰富度上的优势来自什么？",
+    "instruction": "请你回答这个问题：淘宝的商家生态体现在哪些方面？",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝在用户活跃度上的优势来自什么？",
+    "instruction": "请你回答这个问题：淘宝的商业价值体现在哪些方面？",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝在商家留存上的优势来自什么？",
+    "instruction": "请你回答这个问题：淘宝为什么能持续吸引消费者？",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝和京东在平台模式上的主要区别是什么？",
+    "instruction": "请你回答这个问题：淘宝在移动互联网时代经历了什么变化？",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝和拼多多在平台模式上的主要区别是什么？",
+    "instruction": "请直接回答：请介绍一下淘宝的商业模式。",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝和天猫在平台模式上的主要区别是什么？",
+    "instruction": "请直接回答：帮我总结淘宝的发展历史。",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝平台为什么要重视成交转化？",
+    "instruction": "请直接回答：淘宝和京东有什么区别？",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝平台为什么要重视用户复购？",
+    "instruction": "请直接回答：淘宝为什么能吸引这么多商家？",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝平台为什么要重视商家复购？",
+    "instruction": "请直接回答：请简单分析淘宝直播的作用。",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝的商品丰富度为什么重要？",
+    "instruction": "请直接回答：你怎么看淘宝的用户增长策略？",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝的价格带丰富度为什么重要？",
+    "instruction": "请直接回答：淘宝的核心收入来源有哪些？",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝对用户最重要的价值是什么？",
+    "instruction": "请直接回答：淘宝的推荐系统有什么特点？",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝对商家最重要的价值是什么？",
+    "instruction": "请直接回答：淘宝为什么对中小商家有吸引力？",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝的长期壁垒体现在哪些方面？",
+    "instruction": "请直接回答：淘宝平台治理主要关注什么？",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝为什么会持续做推荐优化？",
+    "instruction": "请直接回答：淘宝的支付链路一般是什么样？",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝为什么会持续做搜索优化？",
+    "instruction": "请直接回答：淘宝和天猫的关系是什么？",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝为什么会持续做商家服务优化？",
+    "instruction": "请直接回答：淘宝商家常用哪些促销方式？",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝为什么会持续做用户体验优化？",
+    "instruction": "请直接回答：淘宝为什么适合长尾商品交易？",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝对内容创作者的吸引力来自什么？",
+    "instruction": "请直接回答：淘宝和拼多多的定位有何不同？",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝对消费者的核心承诺是什么？",
+    "instruction": "请直接回答：淘宝搜索和推荐为什么重要？",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝对商家的核心承诺是什么？",
+    "instruction": "请直接回答：淘宝的商家生态体现在哪些方面？",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "淘宝对平台生态的核心要求是什么？",
+    "instruction": "请直接回答：淘宝的商业价值体现在哪些方面？",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "请用一句话说明单元测试为什么有用。",
+    "instruction": "请直接回答：淘宝为什么能持续吸引消费者？",
     "input": "",
     "output": ""
   },
   {
-    "instruction": "请礼貌回复：我看不懂这个报错。",
+    "instruction": "请直接回答：淘宝在移动互联网时代经历了什么变化？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请介绍一下淘宝的商业模式。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我总结淘宝的发展历史。 请简短回答。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "淘宝和京东有什么区别？ 请直接回答。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "淘宝为什么能吸引这么多商家？ 请用一句话说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请简单分析淘宝直播的作用。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "你怎么看淘宝的用户增长策略？ 请简短回答。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "淘宝的核心收入来源有哪些？ 请直接回答。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "淘宝的推荐系统有什么特点？ 请用一句话说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "淘宝为什么对中小商家有吸引力？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "淘宝平台治理主要关注什么？ 请简短回答。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "淘宝的支付链路一般是什么样？ 请直接回答。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "淘宝和天猫的关系是什么？ 请用一句话说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "淘宝商家常用哪些促销方式？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "淘宝为什么适合长尾商品交易？ 请简短回答。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "淘宝和拼多多的定位有何不同？ 请直接回答。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "淘宝搜索和推荐为什么重要？ 请用一句话说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "淘宝的商家生态体现在哪些方面？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "淘宝的商业价值体现在哪些方面？ 请简短回答。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "淘宝为什么能持续吸引消费者？ 请直接回答。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "淘宝在移动互联网时代经历了什么变化？ 请用一句话说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请介绍一下淘宝的商业模式。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我总结淘宝的发展历史。 请简短回答。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "淘宝和京东有什么区别？ 请直接回答。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "淘宝为什么能吸引这么多商家？ 请用一句话说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请简单分析淘宝直播的作用。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "你怎么看淘宝的用户增长策略？ 请简短回答。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "淘宝的核心收入来源有哪些？ 请直接回答。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "淘宝的推荐系统有什么特点？ 请用一句话说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "淘宝为什么对中小商家有吸引力？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "淘宝平台治理主要关注什么？ 请简短回答。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "淘宝的支付链路一般是什么样？ 请直接回答。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "淘宝和天猫的关系是什么？ 请用一句话说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "淘宝商家常用哪些促销方式？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "淘宝为什么适合长尾商品交易？ 请简短回答。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "淘宝和拼多多的定位有何不同？ 请直接回答。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "淘宝搜索和推荐为什么重要？ 请用一句话说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "淘宝的商家生态体现在哪些方面？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "淘宝的商业价值体现在哪些方面？ 请简短回答。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "淘宝为什么能持续吸引消费者？ 请直接回答。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "淘宝在移动互联网时代经历了什么变化？ 请用一句话说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请介绍一下淘宝的商业模式。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我总结淘宝的发展历史。 请简短回答。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "淘宝和京东有什么区别？ 请直接回答。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "淘宝为什么能吸引这么多商家？ 请用一句话说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请简单分析淘宝直播的作用。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "你怎么看淘宝的用户增长策略？ 请简短回答。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "淘宝的核心收入来源有哪些？ 请直接回答。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "淘宝的推荐系统有什么特点？ 请用一句话说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "淘宝为什么对中小商家有吸引力？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "淘宝平台治理主要关注什么？ 请简短回答。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "淘宝的支付链路一般是什么样？ 请直接回答。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "淘宝和天猫的关系是什么？ 请用一句话说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "淘宝商家常用哪些促销方式？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "淘宝为什么适合长尾商品交易？ 请简短回答。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "淘宝和拼多多的定位有何不同？ 请直接回答。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "淘宝搜索和推荐为什么重要？ 请用一句话说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "淘宝的商家生态体现在哪些方面？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "淘宝的商业价值体现在哪些方面？ 请简短回答。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "淘宝为什么能持续吸引消费者？ 请直接回答。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "淘宝在移动互联网时代经历了什么变化？ 请用一句话说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请介绍一下淘宝的商业模式。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我总结淘宝的发展历史。 请简短回答。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "淘宝和京东有什么区别？ 请直接回答。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "淘宝为什么能吸引这么多商家？ 请用一句话说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请简单分析淘宝直播的作用。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "你怎么看淘宝的用户增长策略？ 请简短回答。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "淘宝的核心收入来源有哪些？ 请直接回答。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "淘宝的推荐系统有什么特点？ 请用一句话说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "淘宝为什么对中小商家有吸引力？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "淘宝平台治理主要关注什么？ 请简短回答。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "淘宝的支付链路一般是什么样？ 请直接回答。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "淘宝和天猫的关系是什么？ 请用一句话说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "淘宝商家常用哪些促销方式？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "淘宝为什么适合长尾商品交易？ 请简短回答。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "淘宝和拼多多的定位有何不同？ 请直接回答。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "淘宝搜索和推荐为什么重要？ 请用一句话说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "淘宝的商家生态体现在哪些方面？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "淘宝的商业价值体现在哪些方面？ 请简短回答。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "淘宝为什么能持续吸引消费者？ 请直接回答。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "淘宝在移动互联网时代经历了什么变化？ 请用一句话说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：请介绍一下淘宝的商业模式。 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：帮我总结淘宝的发展历史。 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝和京东有什么区别？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝为什么能吸引这么多商家？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：请简单分析淘宝直播的作用。 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：你怎么看淘宝的用户增长策略？ 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝的核心收入来源有哪些？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝的推荐系统有什么特点？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：淘宝为什么对中小商家有吸引力？ 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：淘宝平台治理主要关注什么？ 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝的支付链路一般是什么样？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝和天猫的关系是什么？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：淘宝商家常用哪些促销方式？ 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：淘宝为什么适合长尾商品交易？ 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝和拼多多的定位有何不同？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝搜索和推荐为什么重要？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：淘宝的商家生态体现在哪些方面？ 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：淘宝的商业价值体现在哪些方面？ 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝为什么能持续吸引消费者？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝在移动互联网时代经历了什么变化？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：请介绍一下淘宝的商业模式。 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：帮我总结淘宝的发展历史。 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝和京东有什么区别？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝为什么能吸引这么多商家？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：请简单分析淘宝直播的作用。 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：你怎么看淘宝的用户增长策略？ 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝的核心收入来源有哪些？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝的推荐系统有什么特点？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：淘宝为什么对中小商家有吸引力？ 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：淘宝平台治理主要关注什么？ 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝的支付链路一般是什么样？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝和天猫的关系是什么？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：淘宝商家常用哪些促销方式？ 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：淘宝为什么适合长尾商品交易？ 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝和拼多多的定位有何不同？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝搜索和推荐为什么重要？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：淘宝的商家生态体现在哪些方面？ 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：淘宝的商业价值体现在哪些方面？ 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝为什么能持续吸引消费者？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝在移动互联网时代经历了什么变化？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：请介绍一下淘宝的商业模式。 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：帮我总结淘宝的发展历史。 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝和京东有什么区别？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝为什么能吸引这么多商家？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：请简单分析淘宝直播的作用。 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：你怎么看淘宝的用户增长策略？ 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝的核心收入来源有哪些？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝的推荐系统有什么特点？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：淘宝为什么对中小商家有吸引力？ 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：淘宝平台治理主要关注什么？ 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝的支付链路一般是什么样？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝和天猫的关系是什么？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：淘宝商家常用哪些促销方式？ 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：淘宝为什么适合长尾商品交易？ 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝和拼多多的定位有何不同？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝搜索和推荐为什么重要？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：淘宝的商家生态体现在哪些方面？ 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：淘宝的商业价值体现在哪些方面？ 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝为什么能持续吸引消费者？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝在移动互联网时代经历了什么变化？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：请介绍一下淘宝的商业模式。 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：帮我总结淘宝的发展历史。 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝和京东有什么区别？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝为什么能吸引这么多商家？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：请简单分析淘宝直播的作用。 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：你怎么看淘宝的用户增长策略？ 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝的核心收入来源有哪些？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝的推荐系统有什么特点？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：淘宝为什么对中小商家有吸引力？ 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：淘宝平台治理主要关注什么？ 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝的支付链路一般是什么样？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝和天猫的关系是什么？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：淘宝商家常用哪些促销方式？ 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：淘宝为什么适合长尾商品交易？ 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝和拼多多的定位有何不同？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝搜索和推荐为什么重要？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：淘宝的商家生态体现在哪些方面？ 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：淘宝的商业价值体现在哪些方面？ 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝为什么能持续吸引消费者？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝在移动互联网时代经历了什么变化？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：请介绍一下淘宝的商业模式。 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：帮我总结淘宝的发展历史。 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝和京东有什么区别？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝为什么能吸引这么多商家？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：请简单分析淘宝直播的作用。 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：你怎么看淘宝的用户增长策略？ 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝的核心收入来源有哪些？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝的推荐系统有什么特点？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：淘宝为什么对中小商家有吸引力？ 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：淘宝平台治理主要关注什么？ 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝的支付链路一般是什么样？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝和天猫的关系是什么？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：淘宝商家常用哪些促销方式？ 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：淘宝为什么适合长尾商品交易？ 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝和拼多多的定位有何不同？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝搜索和推荐为什么重要？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：淘宝的商家生态体现在哪些方面？ 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：淘宝的商业价值体现在哪些方面？ 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝为什么能持续吸引消费者？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝在移动互联网时代经历了什么变化？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：请介绍一下淘宝的商业模式。 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：帮我总结淘宝的发展历史。 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝和京东有什么区别？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝为什么能吸引这么多商家？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：请简单分析淘宝直播的作用。 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：你怎么看淘宝的用户增长策略？ 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝的核心收入来源有哪些？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝的推荐系统有什么特点？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：淘宝为什么对中小商家有吸引力？ 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：淘宝平台治理主要关注什么？ 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝的支付链路一般是什么样？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝和天猫的关系是什么？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：淘宝商家常用哪些促销方式？ 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：淘宝为什么适合长尾商品交易？ 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝和拼多多的定位有何不同？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝搜索和推荐为什么重要？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：淘宝的商家生态体现在哪些方面？ 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：淘宝的商业价值体现在哪些方面？ 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝为什么能持续吸引消费者？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝在移动互联网时代经历了什么变化？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：请介绍一下淘宝的商业模式。 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：帮我总结淘宝的发展历史。 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝和京东有什么区别？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝为什么能吸引这么多商家？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：请简单分析淘宝直播的作用。 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：你怎么看淘宝的用户增长策略？ 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝的核心收入来源有哪些？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝的推荐系统有什么特点？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：淘宝为什么对中小商家有吸引力？ 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：淘宝平台治理主要关注什么？ 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝的支付链路一般是什么样？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝和天猫的关系是什么？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：淘宝商家常用哪些促销方式？ 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：淘宝为什么适合长尾商品交易？ 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝和拼多多的定位有何不同？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝搜索和推荐为什么重要？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：淘宝的商家生态体现在哪些方面？ 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：淘宝的商业价值体现在哪些方面？ 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝为什么能持续吸引消费者？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝在移动互联网时代经历了什么变化？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：请介绍一下淘宝的商业模式。 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：帮我总结淘宝的发展历史。 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝和京东有什么区别？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝为什么能吸引这么多商家？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：请简单分析淘宝直播的作用。 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：你怎么看淘宝的用户增长策略？ 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝的核心收入来源有哪些？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝的推荐系统有什么特点？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：淘宝为什么对中小商家有吸引力？ 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：淘宝平台治理主要关注什么？ 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝的支付链路一般是什么样？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝和天猫的关系是什么？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：淘宝商家常用哪些促销方式？ 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：淘宝为什么适合长尾商品交易？ 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝和拼多多的定位有何不同？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝搜索和推荐为什么重要？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：淘宝的商家生态体现在哪些方面？ 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：淘宝的商业价值体现在哪些方面？ 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝为什么能持续吸引消费者？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝在移动互联网时代经历了什么变化？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：请介绍一下淘宝的商业模式。 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：帮我总结淘宝的发展历史。 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝和京东有什么区别？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝为什么能吸引这么多商家？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：请简单分析淘宝直播的作用。 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：你怎么看淘宝的用户增长策略？ 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝的核心收入来源有哪些？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝的推荐系统有什么特点？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：淘宝为什么对中小商家有吸引力？ 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：淘宝平台治理主要关注什么？ 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝的支付链路一般是什么样？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝和天猫的关系是什么？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：淘宝商家常用哪些促销方式？ 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：淘宝为什么适合长尾商品交易？ 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝和拼多多的定位有何不同？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝搜索和推荐为什么重要？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：淘宝的商家生态体现在哪些方面？ 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：淘宝的商业价值体现在哪些方面？ 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝为什么能持续吸引消费者？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝在移动互联网时代经历了什么变化？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：请介绍一下淘宝的商业模式。 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：帮我总结淘宝的发展历史。 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝和京东有什么区别？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝为什么能吸引这么多商家？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：请简单分析淘宝直播的作用。 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：你怎么看淘宝的用户增长策略？ 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝的核心收入来源有哪些？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝的推荐系统有什么特点？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：淘宝为什么对中小商家有吸引力？ 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：淘宝平台治理主要关注什么？ 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝的支付链路一般是什么样？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝和天猫的关系是什么？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：淘宝商家常用哪些促销方式？ 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：淘宝为什么适合长尾商品交易？ 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝和拼多多的定位有何不同？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝搜索和推荐为什么重要？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：淘宝的商家生态体现在哪些方面？ 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：淘宝的商业价值体现在哪些方面？ 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝为什么能持续吸引消费者？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝在移动互联网时代经历了什么变化？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：请介绍一下淘宝的商业模式。 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：帮我总结淘宝的发展历史。 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝和京东有什么区别？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝为什么能吸引这么多商家？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：请简单分析淘宝直播的作用。 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：你怎么看淘宝的用户增长策略？ 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝的核心收入来源有哪些？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝的推荐系统有什么特点？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：淘宝为什么对中小商家有吸引力？ 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：淘宝平台治理主要关注什么？ 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝的支付链路一般是什么样？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝和天猫的关系是什么？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：淘宝商家常用哪些促销方式？ 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：淘宝为什么适合长尾商品交易？ 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝和拼多多的定位有何不同？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝搜索和推荐为什么重要？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：淘宝的商家生态体现在哪些方面？ 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：淘宝的商业价值体现在哪些方面？ 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝为什么能持续吸引消费者？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝在移动互联网时代经历了什么变化？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：请介绍一下淘宝的商业模式。 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：帮我总结淘宝的发展历史。 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝和京东有什么区别？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝为什么能吸引这么多商家？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：请简单分析淘宝直播的作用。 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：你怎么看淘宝的用户增长策略？ 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝的核心收入来源有哪些？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝的推荐系统有什么特点？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：淘宝为什么对中小商家有吸引力？ 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：淘宝平台治理主要关注什么？ 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝的支付链路一般是什么样？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝和天猫的关系是什么？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：淘宝商家常用哪些促销方式？ 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：淘宝为什么适合长尾商品交易？ 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝和拼多多的定位有何不同？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝搜索和推荐为什么重要？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：淘宝的商家生态体现在哪些方面？ 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：淘宝的商业价值体现在哪些方面？ 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝为什么能持续吸引消费者？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝在移动互联网时代经历了什么变化？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：请介绍一下淘宝的商业模式。 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：帮我总结淘宝的发展历史。 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝和京东有什么区别？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝为什么能吸引这么多商家？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：请简单分析淘宝直播的作用。 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：你怎么看淘宝的用户增长策略？ 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝的核心收入来源有哪些？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝的推荐系统有什么特点？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：淘宝为什么对中小商家有吸引力？ 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：淘宝平台治理主要关注什么？ 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝的支付链路一般是什么样？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝和天猫的关系是什么？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：淘宝商家常用哪些促销方式？ 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：淘宝为什么适合长尾商品交易？ 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝和拼多多的定位有何不同？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝搜索和推荐为什么重要？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：淘宝的商家生态体现在哪些方面？ 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：淘宝的商业价值体现在哪些方面？ 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝为什么能持续吸引消费者？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝在移动互联网时代经历了什么变化？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：请介绍一下淘宝的商业模式。 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：帮我总结淘宝的发展历史。 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝和京东有什么区别？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝为什么能吸引这么多商家？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：请简单分析淘宝直播的作用。 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：你怎么看淘宝的用户增长策略？ 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝的核心收入来源有哪些？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝的推荐系统有什么特点？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：淘宝为什么对中小商家有吸引力？ 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：淘宝平台治理主要关注什么？ 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝的支付链路一般是什么样？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝和天猫的关系是什么？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：淘宝商家常用哪些促销方式？ 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：淘宝为什么适合长尾商品交易？ 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝和拼多多的定位有何不同？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝搜索和推荐为什么重要？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：淘宝的商家生态体现在哪些方面？ 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：淘宝的商业价值体现在哪些方面？ 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝为什么能持续吸引消费者？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝在移动互联网时代经历了什么变化？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：请介绍一下淘宝的商业模式。 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：帮我总结淘宝的发展历史。 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝和京东有什么区别？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝为什么能吸引这么多商家？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：请简单分析淘宝直播的作用。 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：你怎么看淘宝的用户增长策略？ 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝的核心收入来源有哪些？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝的推荐系统有什么特点？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：淘宝为什么对中小商家有吸引力？ 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：淘宝平台治理主要关注什么？ 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝的支付链路一般是什么样？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "帮我说明：淘宝和天猫的关系是什么？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请解释：淘宝商家常用哪些促销方式？ 只回答一句。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请概括：淘宝为什么适合长尾商品交易？ 不要展开。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "请回答：淘宝和拼多多的定位有何不同？ 请简短说明。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "介绍一下如何写单元测试。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "为什么备份很重要？ 请简短回答。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "解释一下代码评审的价值。 请只用一句话回答。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "为什么错误信息要具体？ 请直接回答。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "如何写更礼貌的客服回复？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "介绍一下如何写单元测试。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "为什么备份很重要？ 请简短回答。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "解释一下代码评审的价值。 请只用一句话回答。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "为什么错误信息要具体？ 请直接回答。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "如何写更礼貌的客服回复？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "介绍一下如何写单元测试。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "为什么备份很重要？ 请简短回答。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "解释一下代码评审的价值。 请只用一句话回答。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "为什么错误信息要具体？ 请直接回答。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "如何写更礼貌的客服回复？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "介绍一下如何写单元测试。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "为什么备份很重要？ 请简短回答。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "解释一下代码评审的价值。 请只用一句话回答。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "为什么错误信息要具体？ 请直接回答。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "如何写更礼貌的客服回复？",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "介绍一下如何写单元测试。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "为什么备份很重要？ 请简短回答。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "解释一下代码评审的价值。 请只用一句话回答。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "为什么错误信息要具体？ 请直接回答。",
+    "input": "",
+    "output": ""
+  },
+  {
+    "instruction": "如何写更礼貌的客服回复？",
     "input": "",
     "output": ""
   }

@@ -26,7 +26,7 @@ llamafactory-cli train `
   --lora_target all `
   --quantization_bit 4 `
   --cutoff_len 256 `
-  --max_samples 100 `
+  --max_samples 500 `
   --per_device_train_batch_size 1 `
   --gradient_accumulation_steps 4 `
   --learning_rate 5e-5 `
