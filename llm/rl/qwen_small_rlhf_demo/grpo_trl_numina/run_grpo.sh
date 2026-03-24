@@ -11,8 +11,8 @@ unset RESUME_FROM_CHECKPOINT
 export MODEL_PATH="${MODEL_PATH:-Qwen/Qwen2.5-0.5B-Instruct}"
 export OUTPUT_DIR="$SCRIPT_DIR/outputs/grpo_numina_lora"
 export DATASET_ID="AI-MO/NuminaMath-TIR"
-export TRAIN_SPLIT="train[:1%]"
-export EVAL_SPLIT="test[:1%]"
+export TRAIN_SPLIT="train[:5%]"
+export EVAL_SPLIT="test[:5%]"
 
 if [[ -n "${GRPO_RESUME_FROM:-}" ]]; then
   if [[ -f "$GRPO_RESUME_FROM/trainer_state.json" ]]; then

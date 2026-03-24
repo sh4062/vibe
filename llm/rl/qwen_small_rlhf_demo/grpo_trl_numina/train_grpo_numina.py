@@ -7,6 +7,7 @@ from typing import Any
 from datasets import load_dataset
 from peft import LoraConfig
 from trl import GRPOConfig, GRPOTrainer
+from transformers import TrainerCallback
 
 
 SYSTEM_PROMPT = (
@@ -136,13 +137,27 @@ def save_training_artifacts(trainer, output_dir: str) -> None:
             print(f"Figure saved at: {output_path}")
 
 
+class PlotEveryNStepsCallback(TrainerCallback):
+    def __init__(self, output_dir: str, every_n_steps: int = 10):
+        self.output_dir = output_dir
+        self.every_n_steps = every_n_steps
+
+    def on_log(self, args, state, control, model=None, logs=None, **kwargs):
+        del args, control, model, logs
+        if state.global_step <= 0 or state.global_step % self.every_n_steps != 0:
+            return
+        trainer = kwargs.get("trainer")
+        if trainer is not None:
+            save_training_artifacts(trainer, self.output_dir)
+
+
 def main():
     script_dir = os.path.dirname(os.path.abspath(__file__))
     model_path = os.environ.get("MODEL_PATH", "Qwen/Qwen2.5-0.5B-Instruct")
     output_dir = os.environ.get("OUTPUT_DIR", os.path.join(script_dir, "outputs", "grpo_numina_lora"))
     dataset_id = os.environ.get("DATASET_ID", "AI-MO/NuminaMath-TIR")
-    train_split = os.environ.get("TRAIN_SPLIT", "train[:1%]")
-    eval_split = os.environ.get("EVAL_SPLIT", "test[:1%]")
+    train_split = os.environ.get("TRAIN_SPLIT", "train[:5%]")
+    eval_split = os.environ.get("EVAL_SPLIT", "test[:5%]")
     resume_from_checkpoint = os.environ.get("RESUME_FROM_CHECKPOINT", "").strip()
 
     train_dataset = load_dataset(dataset_id, split=train_split)
@@ -186,6 +201,7 @@ def main():
         args=training_args,
         train_dataset=train_dataset,
         eval_dataset=eval_dataset,
+        callbacks=[PlotEveryNStepsCallback(output_dir, every_n_steps=10)],
         peft_config=LoraConfig(
             r=8,
             lora_alpha=16,

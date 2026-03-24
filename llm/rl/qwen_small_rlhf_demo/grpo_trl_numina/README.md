@@ -9,8 +9,8 @@ Default choices:
 - rewards:
   - format reward for `<think>...</think><answer>...</answer>`
   - accuracy reward for the final answer
-- train split: `train[:1%]`
-- eval split: `test[:1%]`
+- train split: `train[:5%]`
+- eval split: `test[:5%]`
 - checkpoints: every `10` steps
 
 ## Notes
@@ -46,6 +46,8 @@ The main training script will save:
 - `training_reward.png`
 - `eval_reward.png` if eval logs are present
 - reward-specific plots when those metrics are logged
+
+During training, these plots are refreshed every `10` steps so you can inspect progress without waiting for the full run to finish.
 
 ## Resume training
 

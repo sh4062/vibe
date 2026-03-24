@@ -12,8 +12,8 @@ if (-not $env:MODEL_PATH) {
 
 $env:OUTPUT_DIR = Join-Path $ScriptDir "outputs\grpo_numina_lora"
 $env:DATASET_ID = "AI-MO/NuminaMath-TIR"
-$env:TRAIN_SPLIT = "train[:1%]"
-$env:EVAL_SPLIT = "test[:1%]"
+$env:TRAIN_SPLIT = "train[:5%]"
+$env:EVAL_SPLIT = "test[:5%]"
 
 if ($env:GRPO_RESUME_FROM) {
     if ((Test-Path $env:GRPO_RESUME_FROM) -and (Test-Path (Join-Path $env:GRPO_RESUME_FROM "trainer_state.json"))) {
