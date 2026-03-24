@@ -10,14 +10,14 @@ PPO_RESUME_FROM="${PPO_RESUME_FROM:-}"
 
 mkdir -p "$SCRIPT_DIR/outputs"
 
-resume_from=""
+init_adapter=""
 if [[ -n "$PPO_RESUME_FROM" ]]; then
-  if [[ -f "$PPO_RESUME_FROM/trainer_state.json" ]]; then
-    resume_from="$PPO_RESUME_FROM"
+  if [[ -f "$PPO_RESUME_FROM/adapter_config.json" ]]; then
+    init_adapter="$PPO_RESUME_FROM"
   elif [[ -d "$PPO_RESUME_FROM" ]]; then
-    latest_checkpoint=$(find "$PPO_RESUME_FROM" -maxdepth 1 -type d -name 'checkpoint-*' | sort -V | tail -n 1 || true)
+    latest_checkpoint=$(find "$PPO_RESUME_FROM" -maxdepth 1 -type d -name 'checkpoint-*' | while read -r d; do [[ -f "$d/adapter_config.json" ]] && echo "$d"; done | sort -V | tail -n 1 || true)
     if [[ -n "$latest_checkpoint" ]]; then
-      resume_from="$latest_checkpoint"
+      init_adapter="$latest_checkpoint"
     fi
   fi
 fi
@@ -44,6 +44,7 @@ TRAIN_ARGS=(
   --warmup_steps 0
   --report_to none
   --output_dir "$OUTPUT_DIR"
+  --overwrite_output_dir true
   --reward_model "$REWARD_MODEL_PATH"
   --reward_model_type lora
   --top_k 0
@@ -51,11 +52,9 @@ TRAIN_ARGS=(
   --plot_loss true
 )
 
-if [[ -n "$resume_from" ]]; then
-  echo "Resuming PPO from checkpoint: $resume_from"
-  TRAIN_ARGS+=(--resume_from_checkpoint "$resume_from")
-else
-  TRAIN_ARGS+=(--overwrite_output_dir true)
+if [[ -n "$init_adapter" ]]; then
+  echo "Initializing PPO from existing adapter: $init_adapter"
+  TRAIN_ARGS+=(--adapter_name_or_path "$init_adapter")
 fi
 
 llamafactory-cli "${TRAIN_ARGS[@]}"

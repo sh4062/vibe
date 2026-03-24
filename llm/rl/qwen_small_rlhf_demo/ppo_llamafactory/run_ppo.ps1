@@ -2,7 +2,7 @@ $ErrorActionPreference = "Stop"
 
 $ScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
 
-@("TEMPLATE", "REWARD_MODEL_PATH", "OUTPUT_DIR", "RESUME_CHECKPOINT") | ForEach-Object {
+@("TEMPLATE", "REWARD_MODEL_PATH", "OUTPUT_DIR", "PPO_INIT_ADAPTER") | ForEach-Object {
     Remove-Item "Env:$_" -ErrorAction SilentlyContinue
 }
 
@@ -16,19 +16,20 @@ $env:OUTPUT_DIR = Join-Path $ScriptDir "outputs\ppo_lora"
 
 New-Item -ItemType Directory -Force -Path (Join-Path $ScriptDir "outputs") | Out-Null
 
-$ResumeFrom = $null
+$InitAdapter = $null
 if ($env:PPO_RESUME_FROM) {
-    if ((Test-Path $env:PPO_RESUME_FROM) -and (Test-Path (Join-Path $env:PPO_RESUME_FROM "trainer_state.json"))) {
-        $ResumeFrom = $env:PPO_RESUME_FROM
+    if ((Test-Path $env:PPO_RESUME_FROM) -and (Test-Path (Join-Path $env:PPO_RESUME_FROM "adapter_config.json"))) {
+        $InitAdapter = $env:PPO_RESUME_FROM
     }
     elseif (Test-Path $env:PPO_RESUME_FROM) {
         $LatestCheckpoint = Get-ChildItem -Path $env:PPO_RESUME_FROM -Directory -Filter "checkpoint-*" |
+            Where-Object { Test-Path (Join-Path $_.FullName "adapter_config.json") } |
             Sort-Object {
                 if ($_.Name -match '^checkpoint-(\d+)$') { [int]$matches[1] } else { -1 }
             } -Descending |
             Select-Object -First 1
         if ($LatestCheckpoint) {
-            $ResumeFrom = $LatestCheckpoint.FullName
+            $InitAdapter = $LatestCheckpoint.FullName
         }
     }
 }
@@ -55,6 +56,7 @@ $TrainArgs = @(
   "--warmup_steps", "0",
   "--report_to", "none",
   "--output_dir", $env:OUTPUT_DIR,
+  "--overwrite_output_dir", "true",
   "--reward_model", $env:REWARD_MODEL_PATH,
   "--reward_model_type", "lora",
   "--top_k", "0",
@@ -62,11 +64,9 @@ $TrainArgs = @(
   "--plot_loss", "true"
 )
 
-if ($ResumeFrom) {
-    Write-Host "Resuming PPO from checkpoint: $ResumeFrom"
-    $TrainArgs += @("--resume_from_checkpoint", $ResumeFrom)
-} else {
-    $TrainArgs += @("--overwrite_output_dir", "true")
+if ($InitAdapter) {
+    Write-Host "Initializing PPO from existing adapter: $InitAdapter"
+    $TrainArgs += @("--adapter_name_or_path", $InitAdapter)
 }
 
 llamafactory-cli @TrainArgs
