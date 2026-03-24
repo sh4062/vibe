@@ -137,6 +137,7 @@ def main():
     dataset_id = os.environ.get("DATASET_ID", "AI-MO/NuminaMath-TIR")
     train_split = os.environ.get("TRAIN_SPLIT", "train[:1%]")
     eval_split = os.environ.get("EVAL_SPLIT", "test[:1%]")
+    resume_from_checkpoint = os.environ.get("RESUME_FROM_CHECKPOINT", "").strip()
 
     train_dataset = load_dataset(dataset_id, split=train_split)
     eval_dataset = load_dataset(dataset_id, split=eval_split)
@@ -150,7 +151,7 @@ def main():
         "gradient_accumulation_steps": 16,
         "num_train_epochs": 1,
         "logging_steps": 10,
-        "save_steps": 25,
+        "save_steps": 10,
         "report_to": "none",
     }
     optional_kwargs = {
@@ -187,7 +188,11 @@ def main():
             task_type="CAUSAL_LM",
         ),
     )
-    trainer.train()
+    train_kwargs = {}
+    if resume_from_checkpoint:
+        train_kwargs["resume_from_checkpoint"] = resume_from_checkpoint
+        print(f"Resuming GRPO from checkpoint: {resume_from_checkpoint}")
+    trainer.train(**train_kwargs)
     try:
         trainer.evaluate()
     except Exception as exc:

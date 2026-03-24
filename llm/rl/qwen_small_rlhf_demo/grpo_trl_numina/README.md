@@ -11,6 +11,7 @@ Default choices:
   - accuracy reward for the final answer
 - train split: `train[:1%]`
 - eval split: `test[:1%]`
+- checkpoints: every `10` steps
 
 ## Notes
 
@@ -45,3 +46,19 @@ The main training script will save:
 - `training_reward.png`
 - `eval_reward.png` if eval logs are present
 - reward-specific plots when those metrics are logged
+
+## Resume training
+
+You can continue from a specific checkpoint directory:
+
+```powershell
+$env:GRPO_RESUME_FROM="E:\code\vibe\llm\rl\qwen_small_rlhf_demo\grpo_trl_numina\outputs\grpo_numina_lora\checkpoint-10"
+.\run_grpo.ps1
+```
+
+Or point to the output root and the launcher will pick the latest `checkpoint-*` automatically:
+
+```powershell
+$env:GRPO_RESUME_FROM="E:\code\vibe\llm\rl\qwen_small_rlhf_demo\grpo_trl_numina\outputs\grpo_numina_lora"
+.\run_grpo.ps1
+```
