@@ -103,7 +103,7 @@ def main():
     model_path = os.environ.get("MODEL_PATH", r"E:\code\vibe\Qwen2.5-0.5B-Instruct")
     adapter_path = os.environ.get(
         "ADAPTER_PATH",
-        os.path.join(script_dir, "outputs", "ppo_lora"),
+        os.path.join(script_dir, "outputs", "ppo_lora","checkpoint-20"),
     )
     data_path = os.environ.get(
         "DATA_PATH",

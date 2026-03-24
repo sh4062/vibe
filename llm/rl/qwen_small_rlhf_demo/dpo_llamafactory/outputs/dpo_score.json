@@ -1,0 +1,116 @@
+{
+  "base_summary": {
+    "label": "base",
+    "samples": 8,
+    "preferred_count": 1,
+    "preferred_ratio": 0.125,
+    "mean_sum_margin": -23.76171875,
+    "mean_avg_margin": 1.2978515625
+  },
+  "lora_summary": {
+    "label": "lora",
+    "samples": 8,
+    "preferred_count": 1,
+    "preferred_ratio": 0.125,
+    "mean_sum_margin": -23.76171875,
+    "mean_avg_margin": 1.2978515625
+  },
+  "rows": [
+    {
+      "id": 0,
+      "prompt": "Rewrite this sentence in a friendlier tone: Your request has been denied.",
+      "chosen": "I am sorry, but I cannot approve that request right now.",
+      "rejected": "Denied.",
+      "base_sum_margin": -14.78125,
+      "lora_sum_margin": -14.78125,
+      "delta_sum_margin": 0.0,
+      "base_avg_margin": 0.1015625,
+      "lora_avg_margin": 0.1015625,
+      "delta_avg_margin": 0.0
+    },
+    {
+      "id": 1,
+      "prompt": "Answer in one short sentence: Why should people write tests?",
+      "chosen": "Tests help catch bugs early and make code changes safer.",
+      "rejected": "Because tests are required.",
+      "base_sum_margin": -32.625,
+      "lora_sum_margin": -32.625,
+      "delta_sum_margin": 0.0,
+      "base_avg_margin": -0.8125,
+      "lora_avg_margin": -0.8125,
+      "delta_avg_margin": 0.0
+    },
+    {
+      "id": 2,
+      "prompt": "Give a polite two-line response to: I think your package is broken.",
+      "chosen": "Thanks for flagging it. If you share the error message or steps to reproduce, I can help investigate.",
+      "rejected": "It works for me.",
+      "base_sum_margin": -50.625,
+      "lora_sum_margin": -50.625,
+      "delta_sum_margin": 0.0,
+      "base_avg_margin": 0.234375,
+      "lora_avg_margin": 0.234375,
+      "delta_avg_margin": 0.0
+    },
+    {
+      "id": 3,
+      "prompt": "Summarize the benefit of regular backups in one sentence.",
+      "chosen": "Regular backups reduce the risk of losing important data after mistakes or failures.",
+      "rejected": "Backups are useful.",
+      "base_sum_margin": -21.4375,
+      "lora_sum_margin": -21.4375,
+      "delta_sum_margin": 0.0,
+      "base_avg_margin": 0.109375,
+      "lora_avg_margin": 0.109375,
+      "delta_avg_margin": 0.0
+    },
+    {
+      "id": 4,
+      "prompt": "Write a concise answer: What makes documentation helpful?",
+      "chosen": "Helpful documentation is clear, accurate, and easy to follow with examples.",
+      "rejected": "Documentation helps because it is documentation.",
+      "base_sum_margin": -11.75,
+      "lora_sum_margin": -11.75,
+      "delta_sum_margin": 0.0,
+      "base_avg_margin": 1.75,
+      "lora_avg_margin": 1.75,
+      "delta_avg_margin": 0.0
+    },
+    {
+      "id": 5,
+      "prompt": "Answer briefly: Why is consistent naming in code useful?",
+      "chosen": "Consistent naming makes code easier to read, search, and maintain.",
+      "rejected": "Names are not very important.",
+      "base_sum_margin": 2.375,
+      "lora_sum_margin": 2.375,
+      "delta_sum_margin": 0.0,
+      "base_avg_margin": 3.0625,
+      "lora_avg_margin": 3.0625,
+      "delta_avg_margin": 0.0
+    },
+    {
+      "id": 6,
+      "prompt": "Respond politely: Can you fix this bug today?",
+      "chosen": "I can take a look today and let you know what I find once I reproduce the issue.",
+      "rejected": "Maybe.",
+      "base_sum_margin": -43.625,
+      "lora_sum_margin": -43.625,
+      "delta_sum_margin": 0.0,
+      "base_avg_margin": 4.90625,
+      "lora_avg_margin": 4.90625,
+      "delta_avg_margin": 0.0
+    },
+    {
+      "id": 7,
+      "prompt": "One sentence only: Why should answers avoid unnecessary jargon?",
+      "chosen": "Avoiding unnecessary jargon makes answers easier for more people to understand.",
+      "rejected": "Jargon is bad.",
+      "base_sum_margin": -17.625,
+      "lora_sum_margin": -17.625,
+      "delta_sum_margin": 0.0,
+      "base_avg_margin": 1.03125,
+      "lora_avg_margin": 1.03125,
+      "delta_avg_margin": 0.0
+    }
+  ]
+}
