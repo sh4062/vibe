@@ -49,6 +49,19 @@ The main training script will save:
 
 During training, these plots are refreshed every `10` steps so you can inspect progress without waiting for the full run to finish.
 
+## Inspect raw generations
+
+To see what the model is actually generating for a few NuminaMath problems:
+
+```powershell
+cd E:\code\vibe\llm\rl\qwen_small_rlhf_demo\grpo_trl_numina
+$env:MODEL_PATH="E:\code\vibe\Qwen2.5-0.5B-Instruct"
+$env:ADAPTER_PATH="E:\code\vibe\llm\rl\qwen_small_rlhf_demo\grpo_trl_numina\outputs\grpo_numina_lora"
+.\run_inspect_generations.ps1
+```
+
+This writes `outputs\inspect_generations.jsonl` so you can inspect whether the model is actually producing `<think>` and `<answer>` tags.
+
 ## Resume training
 
 You can continue from a specific checkpoint directory:
