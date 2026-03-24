@@ -31,11 +31,9 @@ def prepare_example(example: dict[str, Any]) -> dict[str, Any]:
 def format_reward(completions, **kwargs):
     del kwargs
     pattern = r"^<think>.*?</think>\s*<answer>.*?</answer>$"
-    scores = []
-    for completion in completions:
-        content = completion[0]["content"] if isinstance(completion, list) else str(completion)
-        scores.append(1.0 if re.match(pattern, content, flags=re.DOTALL) else 0.0)
-    return scores
+    completion_contents = [completion[0]["content"] if isinstance(completion, list) else str(completion) for completion in completions]
+    matches = [re.match(pattern, content, flags=re.DOTALL) for content in completion_contents]
+    return [1.0 if match else 0.0 for match in matches]
 
 
 def _extract_answer_text(content: str) -> str:
@@ -55,31 +53,39 @@ def _fallback_math_match(pred_text: str, gold_text: str) -> float:
 try:
     from math_verify import LatexExtractionConfig, parse, verify
 
-    def accuracy_reward(completions, solution, **kwargs):
-        del kwargs
+    def accuracy_reward(completions, **kwargs):
+        solutions = kwargs["solution"]
         rewards = []
-        for completion, gold in zip(completions, solution):
-            content = completion[0]["content"] if isinstance(completion, list) else str(completion)
-            answer_text = _extract_answer_text(content)
-            gold_parsed = parse(gold, extraction_mode="first_match", extraction_config=[LatexExtractionConfig()])
-            pred_parsed = parse(answer_text, extraction_mode="first_match", extraction_config=[LatexExtractionConfig()])
+        completion_contents = [completion[0]["content"] if isinstance(completion, list) else str(completion) for completion in completions]
+        for content, solution in zip(completion_contents, solutions):
+            gold_parsed = parse(
+                solution,
+                extraction_mode="first_match",
+                extraction_config=[LatexExtractionConfig()],
+            )
+            answer_parsed = parse(
+                content,
+                extraction_mode="first_match",
+                extraction_config=[LatexExtractionConfig()],
+            )
             if len(gold_parsed) != 0:
                 try:
-                    rewards.append(float(verify(pred_parsed, gold_parsed)))
+                    rewards.append(float(verify(answer_parsed, gold_parsed)))
                 except Exception:
                     rewards.append(0.0)
             else:
-                rewards.append(_fallback_math_match(answer_text, gold))
+                rewards.append(1.0)
         return rewards
 
 except Exception:
 
-    def accuracy_reward(completions, solution, **kwargs):
-        del kwargs
-        return [
-            _fallback_math_match(completion[0]["content"] if isinstance(completion, list) else str(completion), gold)
-            for completion, gold in zip(completions, solution)
-        ]
+    def accuracy_reward(completions, **kwargs):
+        solutions = kwargs["solution"]
+        completion_contents = [completion[0]["content"] if isinstance(completion, list) else str(completion) for completion in completions]
+        rewards = []
+        for content, solution in zip(completion_contents, solutions):
+            rewards.append(_fallback_math_match(content, solution))
+        return rewards
 
 
 def _plot_metric(log_history: list[dict[str, Any]], key: str, output_path: str) -> bool:
@@ -157,14 +163,14 @@ def main():
     optional_kwargs = {
         "bf16": True,
         "fp16": False,
-        "max_completion_length": 160,
+        "max_completion_length": 512,
         "num_generations": 4,
         "per_device_train_batch_size": 1,
         "eval_strategy": "steps",
         "eval_steps": 25,
         "save_strategy": "steps",
         "max_prompt_length": 512,
-        "max_length": 768,
+        "max_length": 1024,
     }
 
     accepted = inspect.signature(GRPOConfig.__init__).parameters
