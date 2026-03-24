@@ -3,8 +3,8 @@ library_name: transformers
 model_name: grpo_numina_lora
 tags:
 - generated_from_trainer
-- grpo
 - trl
+- grpo
 licence: license
 ---
 

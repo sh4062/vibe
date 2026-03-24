@@ -9,10 +9,8 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 
 
 SYSTEM_PROMPT = (
-    "A conversation between User and Assistant. The user asks a question, and the Assistant solves it. "
-    "The assistant first thinks about the reasoning process in the mind and then provides the user with the answer. "
-    "The reasoning process and answer are enclosed within <think> </think> and <answer> </answer> tags, respectively, "
-    "i.e., <think> reasoning process here </think><answer> answer here </answer>."
+ "Reply strictly in this format: <think>reasoning</think><answer>final answer</answer>. "
+    "Do not add any text before or after the tags."
 )
 
 
@@ -76,7 +74,7 @@ def main():
     dataset_id = os.environ.get("DATASET_ID", "AI-MO/NuminaMath-TIR")
     split = os.environ.get("INSPECT_SPLIT", "test[:5]")
     output_path = os.environ.get("INSPECT_OUTPUT", os.path.join(script_dir, "outputs", "inspect_generations.jsonl"))
-    max_new_tokens = int(os.environ.get("MAX_NEW_TOKENS", "256"))
+    max_new_tokens = int(os.environ.get("MAX_NEW_TOKENS", "512"))
 
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
 

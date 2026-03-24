@@ -168,7 +168,7 @@ def main():
         "learning_rate": 1e-5,
         "remove_unused_columns": False,
         "gradient_accumulation_steps": 16,
-        "num_train_epochs": 10,
+        "num_train_epochs": 2,
         "logging_steps": 10,
         "save_steps": 10,
         "report_to": "none",
